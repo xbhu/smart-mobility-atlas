@@ -1,0 +1,21 @@
+title: "Smart Mobility Research Atlas"
+description: "A structured research atlas of the Smart Mobility Lab at Penn State"
+
+baseurl: ""
+url: ""
+
+theme: just-the-docs
+
+# Collections
+collections:
+  papers:
+    output: true
+    permalink: /papers/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: papers
+    values:
+      layout: paper

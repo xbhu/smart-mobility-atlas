@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<article class="paper">
+
+  <header>
+    <h1>{{ page.title }}</h1>
+
+    <dl class="paper-meta">
+      {% if page.author %}
+      <dt>Author(s)</dt>
+      <dd>{{ page.author }}</dd>
+      {% endif %}
+
+      {% if page.year %}
+      <dt>Year</dt>
+      <dd>{{ page.year }}</dd>
+      {% endif %}
+
+      {% if page.journal %}
+      <dt>Journal / Venue</dt>
+      <dd>{{ page.journal }}</dd>
+      {% endif %}
+
+      {% if page.status %}
+      <dt>Status</dt>
+      <dd>{{ page.status }}</dd>
+      {% endif %}
+
+      {% if page.doi %}
+      <dt>DOI</dt>
+      <dd><a href="https://doi.org/{{ page.doi }}" target="_blank">{{ page.doi }}</a></dd>
+      {% endif %}
+
+      {% if page.category %}
+      <dt>Category</dt>
+      <dd>{{ page.category }}{% if page.subcategory %} &rsaquo; {{ page.subcategory }}{% endif %}</dd>
+      {% endif %}
+    </dl>
+  </header>
+
+  <section class="paper-content">
+    {{ content }}
+  </section>
+
+  {% if page.code or page.ppt or page.video or page.zh %}
+  <section class="paper-resources">
+    <h2>Resources</h2>
+    <ul>
+      {% if page.code %}
+      <li><a href="{{ page.code }}" target="_blank">Code</a></li>
+      {% endif %}
+      {% if page.ppt %}
+      <li><a href="{{ page.ppt }}" target="_blank">Slides</a></li>
+      {% endif %}
+      {% if page.video %}
+      <li><a href="{{ page.video }}" target="_blank">Video</a></li>
+      {% endif %}
+      {% if page.zh %}
+      <li><a href="{{ page.zh }}" target="_blank">Chinese Version</a></li>
+      {% endif %}
+    </ul>
+  </section>
+  {% endif %}
+
+</article>
