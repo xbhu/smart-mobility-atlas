@@ -1,8 +1,8 @@
 title: "Smart Mobility Research Atlas"
 description: "A structured research atlas of the Smart Mobility Lab at Penn State"
 
-baseurl: ""
-url: ""
+baseurl: "/smart-mobility-atlas"
+url: "https://xbhu.github.io"
 
 remote_theme: just-the-docs/just-the-docs
 
