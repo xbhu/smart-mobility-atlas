@@ -12,13 +12,13 @@ This atlas organizes the research output of the **Smart Mobility Lab** at Penn S
 
 ## Research Areas
 
-### [Automated Vehicles (AV)]({{ site.baseurl }}/papers/av/)
+### [Automated Vehicles (AV)]({{ site.baseurl }}/papers/av-management-yuxin-lane/)
 Management, control, and integration of automated and connected vehicles in mixed traffic.
 
-### [Transportation Electrification]({{ site.baseurl }}/papers/ev/)
+### [Transportation Electrification]({{ site.baseurl }}/papers/ev-yang-song-partd/)
 Electric vehicle adoption, charging infrastructure, and grid-transportation coupling.
 
-### [System Modeling & Demand Management]({{ site.baseurl }}/papers/system-modeling/)
+### [System Modeling & Demand Management]({{ site.baseurl }}/papers/system-modeling-pan-vdf-review/)
 Travel demand modeling, volume-delay functions, and network optimization.
 
 ---
