@@ -14,7 +14,7 @@ category: "Automated Vehicles"
 subcategory: "CDA for Work Zone"
 code: "https://github.com/xbhu/AV-WorkZoneCDA-testing/tree/main"
 ppt: "https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%202021%20slides.pdf"
-PDFdownload: "https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%20paper%202021.pdf"
+PDFdownload: "https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%202021%20paper.pdf"
 video: "https://www.youtube.com/watch?v=O1Vrhn0wct8"
 zh: ""
 ---
