@@ -17,6 +17,7 @@ ppt: "https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Te
 PDFdownload: "https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%202021%20paper.pdf"
 video: "https://www.youtube.com/watch?v=O1Vrhn0wct8"
 zh: "/papers/av-atma-field-testing-trr-2021-zh/"
+citation_apa: "Tang, Q., Cheng, Y., Hu, X., Chen, C., Song, Y., & Qin, R. (2021). Evaluation methodology of leader-follower autonomous vehicle system for work zone maintenance. Transportation Research Record, 2675(5), 107–119. https://doi.org/10.1177/0361198120985233"
 ---
 
 ## What problem does this research solve?
