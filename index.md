@@ -15,7 +15,7 @@ area and linked to associated resources.
 ## Automated Vehicles
 
 ### CDA for Work Zone
-- [Evaluation Methodology of Leader-Follower AV System for Work Zone Maintenance — Tang, Cheng, Hu et al. (2021)]({% link _papers/av-atma-field-testing-trr-2021.md %})
+- [Evaluation Methodology of Leader-Follower AV System for Work Zone Maintenance — Tang et al. (2021)]({% link _papers/av-atma-field-testing-trr-2021.md %})
 
 ### AV Management
 - [Yuxin lane paper placeholder]({% link _papers/av-management-yuxin-lane.md %})
