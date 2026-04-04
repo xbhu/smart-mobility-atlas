@@ -6,21 +6,35 @@ nav_order: 1
 
 # Smart Mobility Research Atlas
 
-This atlas organizes the research output of the **Smart Mobility Lab** at Penn State, led by Dr. Xianbiao Hu. Papers are grouped by research area and linked to associated resources.
+This atlas organizes the research output of the **Smart Mobility Lab** 
+at Penn State, led by Dr. Xianbiao (XB) Hu. Papers are grouped by research 
+area and linked to associated resources.
 
 ---
 
-## Research Areas
+## Automated Vehicles
 
-### [Automated Vehicles (AV)]({{ site.baseurl }}/papers/av-management-yuxin-lane/)
-Management, control, and integration of automated and connected vehicles in mixed traffic.
+### CDA for Work Zone
+- [Evaluation Methodology of Leader-Follower AV System for Work Zone Maintenance — Tang, Cheng, Hu et al. (2021)]({% link _papers/av-atma-field-testing-trr-2021.md %})
 
-### [Transportation Electrification]({{ site.baseurl }}/papers/ev-yang-song-partd/)
-Electric vehicle adoption, charging infrastructure, and grid-transportation coupling.
-
-### [System Modeling & Demand Management]({{ site.baseurl }}/papers/system-modeling-pan-vdf-review/)
-Travel demand modeling, volume-delay functions, and network optimization.
+### AV Management
+- [Yuxin lane paper placeholder]({% link _papers/av-management-yuxin-lane.md %})
 
 ---
 
-*Papers are maintained by lab members. See the [paper template]({{ site.baseurl }}/papers/template/) to add new entries.*
+## Transportation Electrification
+- [Yang Song PartD placeholder]({% link _papers/ev-yang-song-partd.md %})
+
+---
+
+## System Modeling & Demand Management
+- [VDF Review — Pan et al.]({% link _papers/system-modeling-pan-vdf-review.md %})
+
+---
+
+## Privacy-Preserving Data Protection
+
+---
+
+*Papers are maintained by lab members. See the 
+[paper template]({% link _papers/template.md %}) to add new entries.*
