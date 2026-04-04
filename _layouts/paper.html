@@ -36,6 +36,11 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.citation_apa %}
+  <h2>Cite This Paper</h2>
+  <p>{{ page.citation_apa }}</p>
+  {% endif %}
+
   {% if page.code or page.ppt or page.PDFdownload or page.video or page.zh %}
   <h2>Resources</h2>
   <ul>
