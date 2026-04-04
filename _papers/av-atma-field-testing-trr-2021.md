@@ -128,9 +128,3 @@ where standard parametric tests are inappropriate.
   with some observations reaching **±10 inches**. This is an 
   important operational boundary for deployment planning: agencies 
   should factor turning geometry into their route design.
-
-## Resources
-- [Powerpoint](https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%202021%20slides.pdf)
-- [Paper (DOI)](https://doi.org/10.1177/0361198120985233)
-- [Paper (PDFDownload)](https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%20paper%202021.pdf)
-- [ATMA Project Overview](https://sites.psu.edu/xbhu/autonomous-truck-mounted-attenuator/)
