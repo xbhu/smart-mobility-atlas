@@ -16,7 +16,7 @@ code: "https://github.com/xbhu/AV-WorkZoneCDA-testing/tree/main"
 ppt: "https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%202021%20slides.pdf"
 PDFdownload: "https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%202021%20paper.pdf"
 video: "https://www.youtube.com/watch?v=O1Vrhn0wct8"
-zh: ""
+zh: "/papers/av-atma-field-testing-trr-2021-zh/"
 ---
 
 ## What problem does this research solve?
