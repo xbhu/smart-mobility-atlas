@@ -41,9 +41,10 @@ layout: default
   <p>{{ page.citation_apa }}</p>
   {% endif %}
 
-  {% if page.code or page.ppt or page.PDFdownload or page.video or page.zh %}
+  {% if page.website or page.code or page.ppt or page.PDFdownload or page.video or page.zh %}
   <h2>Resources</h2>
   <ul>
+    {% if page.website %}<li><a href="{{ page.website }}" target="_blank">Project Website</a></li>{% endif %}
     {% if page.code %}<li><a href="{{ page.code }}" target="_blank">Code</a></li>{% endif %}
     {% if page.ppt %}<li><a href="{{ page.ppt }}" target="_blank">Slides</a></li>{% endif %}
     {% if page.PDFdownload %}<li><a href="{{ page.PDFdownload }}" target="_blank">Paper (PDF)</a></li>{% endif %}

@@ -20,6 +20,9 @@ area and linked to associated resources.
 ### AV Management
 - [Yuxin lane paper placeholder]({% link _papers/av-management-yuxin-lane.md %})
 
+### AV Policy & Regulation
+- [Highly Automated Vehicle Policy in the United States — Hu (2026)]({% link _papers/hav-policy-trt-2026.md %})
+
 ---
 
 ## Transportation Electrification
