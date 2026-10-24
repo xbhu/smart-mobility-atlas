@@ -5,6 +5,9 @@ export const ui = {
   en: {
     skip: "Skip to content",
     allPapers: "All papers",
+    papers: "Papers",
+    theLab: "The Lab",
+    labPublications: "Lab publications",
     labSite: "Lab website",
     atlas: "Research Atlas",
     inOneSentence: "In one sentence",
@@ -37,6 +40,9 @@ export const ui = {
   zh: {
     skip: "跳到正文",
     allPapers: "全部论文",
+    papers: "论文",
+    theLab: "实验室",
+    labPublications: "实验室论文列表",
     labSite: "实验室主页",
     atlas: "Research Atlas",
     inOneSentence: "一句话概括",

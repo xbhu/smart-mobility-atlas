@@ -67,7 +67,7 @@ const total = pages.length + upcoming.length;
     <div class="home-grid-head">
       <h2 id="all-h">All papers</h2>
       <div class="filters" role="group" aria-label="Filter by research thrust">
-        <button type="button" data-filter="all" aria-pressed="true">All <span class="count">{total}</span></button>
+        <button type="button" id="all" data-filter="all" aria-pressed="true">All <span class="count">{total}</span></button>
         {thrusts.map((t) => (
           <button type="button" id={t.id} data-filter={t.id} aria-pressed="false" disabled={count(t.id) === 0}>
             <span class="thrust-dot" data-thrust={t.id} aria-hidden="true"></span>{t.name} <span class="count">{count(t.id)}</span>
@@ -92,10 +92,13 @@ const total = pages.length + upcoming.length;
       if (updateHash) history.replaceState(null, "", id === "all" ? location.pathname : `#${id}`);
     }
     buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.filter ?? "all")));
-    if (location.hash) {
+    function fromHash() {
+      if (!location.hash) return;
       apply(location.hash.slice(1), false);
-      document.getElementById("all-h")?.scrollIntoView();
+      document.getElementById("all-h")?.scrollIntoView({ behavior: "smooth" });
     }
+    fromHash();
+    window.addEventListener("hashchange", fromHash);
 
     // Cards with a looping teaser play it while hovered or focused (and not for reduced motion).
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
