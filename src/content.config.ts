@@ -42,6 +42,8 @@ const atlas = defineCollection({
       .optional(),
     // Three to five headline numbers, e.g. { value: "1.9 s", label: "to a full stop when both radios fail" }.
     key_numbers: z.array(z.object({ value: z.string(), label: z.string() })).max(5).optional(),
+    // Shown as the lead story on the home page (the most recently updated featured page wins).
+    featured: z.boolean().optional(),
     updated: date.optional(),
     // Drafts are built only in development (npm run dev), never on the live site.
     draft: z.boolean().optional(),

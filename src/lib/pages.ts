@@ -49,3 +49,15 @@ export function pageImage(p: AtlasPage): string | null {
 }
 
 export const pagePath = (slug: string, lang: Lang = "en") => (lang === "zh" ? `/${slug}/zh/` : `/${slug}/`);
+
+/** Looping teaser video of a page, if its lead media is one. */
+export function pageLoop(p: AtlasPage): { src: string; poster?: string } | null {
+  const h = p.en.data.hero;
+  return h?.video && h.loop ? { src: h.video, poster: h.poster } : null;
+}
+
+/** "TR Part D 2023"; no repeated year when the venue already names it ("ECCV 2026"). */
+export function venueYear(p: { venue: string; venue_short: string | null; year: number }): string {
+  const v = p.venue_short ?? p.venue;
+  return v.includes(String(p.year)) ? v : `${v} ${p.year}`;
+}

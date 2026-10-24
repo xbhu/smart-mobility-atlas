@@ -1,60 +1,120 @@
 ---
+// Home page: a short introduction, one lead story, then every Atlas page as a card grid that can
+// be filtered by research thrust. Representative papers (featured on the lab site) that do not
+// have a page yet can be shown as muted "Coming soon" cards; see SHOW_UPCOMING.
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
+import CardUpcoming from "../components/CardUpcoming.astro";
+import LeadMedia from "../components/LeadMedia.astro";
 import { lab } from "../lib/lab";
-import { atlasPages } from "../lib/pages";
+import { atlasPages, pagePath } from "../lib/pages";
+
+// Set ATLAS_SHOW_UPCOMING=0 to hide papers that do not have a page yet.
+const SHOW_UPCOMING = (process.env.ATLAS_SHOW_UPCOMING ?? "1") !== "0";
 
 const pages = await atlasPages();
-const { thrusts } = await lab();
-const groups = thrusts.map((t, i) => ({
-  thrust: t,
-  num: String(i + 1).padStart(2, "0"),
-  pages: pages.filter((p) => p.thrust.id === t.id),
-}));
-const withPages = groups.filter((g) => g.pages.length > 0);
-const upcoming = groups.filter((g) => g.pages.length === 0);
+const { thrusts, papers } = await lab();
+const featured =
+  pages
+    .filter((p) => p.en.data.featured)
+    .sort((a, b) => String(b.en.data.updated ?? "").localeCompare(String(a.en.data.updated ?? "")))[0] ?? pages[0];
+
+const covered = new Set(pages.map((p) => p.paper.id));
+const thrustById = new Map(thrusts.map((t) => [t.id, t]));
+const upcoming = SHOW_UPCOMING
+  ? [...papers.values()]
+      .filter((p) => p.featured && !covered.has(p.id) && thrustById.has(p.thrusts[0]))
+      .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+  : [];
+
+const count = (id: string) =>
+  pages.filter((p) => p.thrust.id === id).length + upcoming.filter((p) => p.thrusts[0] === id).length;
+const total = pages.length + upcoming.length;
 ---
 <Base description="Plain-language guides to the representative research of the Penn State Smart Mobility Lab: the problem, what we did, what we found, and links to the paper, code, data and slides.">
-  <section class="band index-intro">
-    <div class="wrap">
-      <h1>Research Atlas</h1>
-      <p class="lede">
-        Plain-language guides to the Smart Mobility Lab's representative research. Each page explains
-        the problem a paper set out to solve, what we did and found, and who can use it, with links to
-        the paper, code, data and slides. Selected pages are also available in Chinese.
-      </p>
-      <ul class="thrust-jump">
-        {withPages.map((g) => (
-          <li><a href={`#${g.thrust.id}`}>{g.thrust.name} <span class="count">{g.pages.length}</span></a></li>
-        ))}
-      </ul>
-    </div>
+  <section class="home-intro wrap">
+    <h1>Research Atlas</h1>
+    <p class="lede">
+      Plain-language guides to the Smart Mobility Lab's representative research: the problem each
+      paper set out to solve, what we did and found, and who can use it, with the paper, code, data
+      and slides one click away.
+    </p>
   </section>
 
-  {withPages.map((g, i) => (
-    <section class:list={["section", "thrust-section", { "section--concrete": i % 2 === 1 }]} id={g.thrust.id} aria-labelledby={`h-${g.thrust.id}`}>
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2 id={`h-${g.thrust.id}`}><span class="thrust-num" aria-hidden="true">{g.num}</span>{g.thrust.name}</h2>
-            <p>{g.thrust.tagline}</p>
-          </div>
-          <a class="more" href={g.thrust.url}>This thrust on the lab website →</a>
-        </div>
-        <ul class="cards">{g.pages.map((p) => <Card page={p} />)}</ul>
+  {featured && (
+    <section class="lead-story wrap" aria-labelledby="lead-h">
+      <div class="lead-story-media">
+        {featured.en.data.hero ? (
+          <LeadMedia hero={{ ...featured.en.data.hero, caption: undefined, credit: undefined }} lang="en" title={featured.paper.title} />
+        ) : null}
       </div>
-    </section>
-  ))}
-
-  {upcoming.length > 0 && (
-    <section class="section">
-      <div class="wrap">
-        <p class="soon">
-          Pages in preparation: {upcoming.map((g, i) => (
-            <>{i > 0 && " · "}<a href={g.thrust.url}>{g.thrust.name}</a></>
-          ))}.
+      <div class="lead-story-text">
+        <p class="lead-kicker">
+          <span class="thrust-tag" data-thrust={featured.thrust.id}>{featured.thrust.name}</span>
+          <span>{featured.paper.venue} · {featured.paper.year}</span>
+        </p>
+        <h2 id="lead-h"><a href={pagePath(featured.slug)}>{featured.paper.title}</a></h2>
+        <p class="lead-tldr">{featured.en.data.tldr}</p>
+        <p class="lead-actions">
+          <a class="btn-pill" href={pagePath(featured.slug)}>Read the story <span aria-hidden="true">→</span></a>
+          {featured.zh && <a class="btn-pill btn-pill--ghost" href={pagePath(featured.slug, "zh")} lang="zh-CN">中文版</a>}
         </p>
       </div>
     </section>
   )}
+
+  <section class="home-grid wrap" aria-labelledby="all-h">
+    <div class="home-grid-head">
+      <h2 id="all-h">All papers</h2>
+      <div class="filters" role="group" aria-label="Filter by research thrust">
+        <button type="button" data-filter="all" aria-pressed="true">All <span class="count">{total}</span></button>
+        {thrusts.map((t) => (
+          <button type="button" id={t.id} data-filter={t.id} aria-pressed="false" disabled={count(t.id) === 0}>
+            <span class="thrust-dot" data-thrust={t.id} aria-hidden="true"></span>{t.name} <span class="count">{count(t.id)}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+    <ul class="cards" id="grid">
+      {pages.map((p) => <Card page={p} showThrust />)}
+      {upcoming.map((p) => <CardUpcoming paper={p} thrust={thrustById.get(p.thrusts[0])!} />)}
+    </ul>
+  </section>
+
+  <script>
+    // Thrust filter. The hash (/#work-zone-automation) selects a thrust, so paper pages can link here.
+    const buttons = [...document.querySelectorAll<HTMLButtonElement>(".filters button")];
+    const items = [...document.querySelectorAll<HTMLElement>("#grid .card-item")];
+    function apply(id: string, updateHash = true) {
+      if (!buttons.some((b) => b.dataset.filter === id && !b.disabled)) id = "all";
+      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === id)));
+      items.forEach((el) => (el.hidden = id !== "all" && el.dataset.thrust !== id));
+      if (updateHash) history.replaceState(null, "", id === "all" ? location.pathname : `#${id}`);
+    }
+    buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.filter ?? "all")));
+    if (location.hash) {
+      apply(location.hash.slice(1), false);
+      document.getElementById("all-h")?.scrollIntoView();
+    }
+
+    // Cards with a looping teaser play it while hovered or focused (and not for reduced motion).
+    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelectorAll<HTMLAnchorElement>(".card").forEach((card) => {
+      const video = card.querySelector<HTMLVideoElement>("video[data-src]");
+      if (!video || still) return;
+      const play = () => {
+        if (!video.src) video.src = video.dataset.src!;
+        card.classList.add("is-playing");
+        video.play().catch(() => {});
+      };
+      const stop = () => {
+        card.classList.remove("is-playing");
+        video.pause();
+      };
+      card.addEventListener("mouseenter", play);
+      card.addEventListener("focus", play);
+      card.addEventListener("mouseleave", stop);
+      card.addEventListener("blur", stop);
+    });
+  </script>
 </Base>

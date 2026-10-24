@@ -1,0 +1,24 @@
+---
+// A representative paper that does not have an Atlas page yet: same footprint as a card, muted,
+// not a link. Its image is the research thrust's photo from the lab site.
+import type { LabPaper, LabThrust } from "../lib/lab";
+import { venueYear } from "../lib/pages";
+interface Props { paper: LabPaper; thrust: LabThrust }
+const { paper, thrust } = Astro.props;
+---
+<li class="card-item" data-thrust={thrust.id}>
+  <div class="card card--upcoming">
+    <span class="card-media">
+      {thrust.image && <img src={thrust.image} alt="" loading="lazy" />}
+      <span class="card-soon">Coming soon</span>
+    </span>
+    <span class="card-body">
+      <span class="card-kicker">
+        <span class="thrust-dot" data-thrust={thrust.id}>{thrust.name}</span>
+        <span>{venueYear(paper)}</span>
+      </span>
+      <span class="card-title">{paper.title}</span>
+      {paper.summary && <span class="card-tldr">{paper.summary}</span>}
+    </span>
+  </div>
+</li>
