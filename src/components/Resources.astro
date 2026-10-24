@@ -2,8 +2,8 @@
 // Links to the paper and everything that comes with it, in a fixed order.
 import type { LabPaper } from "../lib/lab";
 import { ui, type Lang } from "../lib/i18n";
-interface Props { paper: LabPaper; lang: Lang }
-const { paper, lang } = Astro.props;
+interface Props { paper: LabPaper; lang: Lang; zhPath?: string; enPath?: string }
+const { paper, lang, zhPath, enPath } = Astro.props;
 const t = ui[lang];
 const icon = {
   doc: '<path d="M4 1h6l4 4v10H4z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 1v4h4" fill="none" stroke="currentColor" stroke-width="1.6"/>',
@@ -12,6 +12,7 @@ const icon = {
   data: '<ellipse cx="8" cy="4" rx="5.5" ry="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2.5 4v8c0 1.1 2.5 2 5.5 2s5.5-.9 5.5-2V4M2.5 8c0 1.1 2.5 2 5.5 2s5.5-.9 5.5-2" fill="none" stroke="currentColor" stroke-width="1.5"/>',
   slides: '<rect x="1.5" y="2.5" width="13" height="9" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11.5V14M5 14h6" stroke="currentColor" stroke-width="1.6"/>',
   video: '<path d="M4 2.5 13 8l-9 5.5z" fill="currentColor"/>',
+  lang: '<path d="M2 3.5h7M5.5 2v1.5M3.5 3.5c.4 2.6 2 4.5 4 5.5M7.5 3.5C7 6 5.3 8 3 9.5M8.5 14l3-7 3 7M9.6 11.5h3.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>',
   web: '<circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 8h12M8 2c2 2 2 10 0 12M8 2c-2 2-2 10 0 12" fill="none" stroke="currentColor" stroke-width="1.3"/>',
 };
 const paperUrl = paper.doi ? `https://doi.org/${paper.doi}` : paper.url;
@@ -23,12 +24,14 @@ const links = [
   paper.slides && { label: t.slides, href: paper.slides, icon: icon.slides },
   paper.video && { label: t.video, href: paper.video, icon: icon.video },
   paper.website && { label: t.website, href: paper.website, icon: icon.web },
-].filter(Boolean) as { label: string; href: string; icon: string; primary?: boolean }[];
+  lang === "en" && zhPath && { label: "中文", href: zhPath, icon: icon.lang, lang: "zh-CN" },
+  lang === "zh" && enPath && { label: "English", href: enPath, icon: icon.lang, lang: "en" },
+].filter(Boolean) as { label: string; href: string; icon: string; primary?: boolean; lang?: string }[];
 ---
 {links.length > 0 && (
   <ul class="resources" aria-label={t.resources}>
     {links.map((l) => (
-      <li><a class:list={{ primary: l.primary }} href={l.href}><svg viewBox="0 0 16 16" aria-hidden="true" set:html={l.icon} />{l.label}</a></li>
+      <li><a class:list={{ primary: l.primary }} href={l.href} lang={l.lang}><svg viewBox="0 0 16 16" aria-hidden="true" set:html={l.icon} />{l.label}</a></li>
     ))}
   </ul>
 )}

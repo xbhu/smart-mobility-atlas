@@ -8,16 +8,16 @@ const { paper, lang } = Astro.props;
 const t = ui[lang];
 ---
 <section class="cite" aria-labelledby="cite-h" data-copied={t.copied} data-copy={t.copy}>
-  <h2 id="cite-h">{t.cite}</h2>
+  <h2 id="cite-h">{t.citation}</h2>
   <div class="cite-tabs" role="tablist">
-    <button type="button" role="tab" id="tab-apa" aria-controls="cite-apa" aria-selected="true">APA</button>
-    <button type="button" role="tab" id="tab-bib" aria-controls="cite-bib" aria-selected="false">BibTeX</button>
+    <button type="button" role="tab" id="tab-bib" aria-controls="cite-bib" aria-selected="true">BibTeX</button>
+    <button type="button" role="tab" id="tab-apa" aria-controls="cite-apa" aria-selected="false">APA</button>
   </div>
-  <div class="cite-panel" id="cite-apa" role="tabpanel" aria-labelledby="tab-apa">
-    <div class="cite-box"><p data-copy-source set:html={apaHtml(paper)} /><button type="button" class="cite-copy">{t.copy}</button></div>
-  </div>
-  <div class="cite-panel" id="cite-bib" role="tabpanel" aria-labelledby="tab-bib" hidden>
+  <div class="cite-panel" id="cite-bib" role="tabpanel" aria-labelledby="tab-bib">
     <div class="cite-box"><pre data-copy-source>{bibtex(paper)}</pre><button type="button" class="cite-copy">{t.copy}</button></div>
+  </div>
+  <div class="cite-panel" id="cite-apa" role="tabpanel" aria-labelledby="tab-apa" hidden>
+    <div class="cite-box"><p data-copy-source set:html={apaHtml(paper)} /><button type="button" class="cite-copy">{t.copy}</button></div>
   </div>
 </section>
 <script>

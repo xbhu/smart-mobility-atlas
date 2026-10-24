@@ -30,6 +30,10 @@ export const ui = {
     playVideo: "Play video",
     underReview: "Under review",
     accepted: "Accepted",
+    abstract: "Abstract",
+    abstractNote: "From the paper",
+    citation: "Citation",
+    moreAtlas: "More from the Research Atlas",
   },
   zh: {
     skip: "跳到正文",
@@ -59,6 +63,10 @@ export const ui = {
     playVideo: "播放视频",
     underReview: "审稿中",
     accepted: "已录用",
+    abstract: "论文摘要",
+    abstractNote: "英文原文",
+    citation: "引用",
+    moreAtlas: "Research Atlas 中的其他工作",
   },
 } as const;
 

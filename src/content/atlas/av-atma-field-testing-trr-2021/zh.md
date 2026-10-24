@@ -35,6 +35,11 @@ ATMA系统允许操作员设置关键运行参数，例如领航车与跟随车�
 - **紧急情况**：紧急停车、人工接管、模拟追尾冲击、临时脱离与追回
 
 <figure>
+  <div class="yt"><button type="button" data-yt="SXMpkDJ_uG8" aria-label="播放视频：ATMA系统在密苏里DOT的实地测试"><img src="https://i.ytimg.com/vi/SXMpkDJ_uG8/hqdefault.jpg" alt="" loading="lazy" /><span class="yt-play"><svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M0 0l14 8-14 8z" fill="currentColor" /></svg>播放视频</span></button></div>
+  <figcaption>与密苏里DOT合作的实地测试：无人驾驶跟随车在各测试场景中跟踪领航车。</figcaption>
+</figure>
+
+<figure>
   <img src="/media/av-atma-field-testing-trr-2021/test-design.png" alt="示意图：31项测试分为可直接观察结果的测试（如紧急停车）和需要统计分析的测试（如以横向偏差衡量的车道精度）" loading="lazy" />
   <figcaption>31项测试的评判方式：部分结果可以直接观察；横向精度则依据横向偏差（CTE）的统计特征判断。</figcaption>
 </figure>

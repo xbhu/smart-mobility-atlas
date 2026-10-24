@@ -8,6 +8,15 @@ hero:
   alt: A driverless follow truck carrying a crash attenuator behind a lead work truck, with a wireless signal drawn between them
   caption: "The leader-follower system: the human-driven lead truck (right) and the driverless follow truck with its truck mounted attenuator (left), linked by vehicle-to-vehicle communication."
   credit: Royal Truck & Equipment
+affiliations:
+  - Missouri University of Science and Technology
+  - Chang'an University
+  - Stony Brook University
+author_affiliations: [[1], [2, 1], [1], [1], [1], [3]]
+abstract: |-
+  Mobile and slow-moving operations, such as striping, sweeping, bridge flushing, and pothole patching, are critical for efficient and safe operation of a highway transportation system. However, reducing hazards for roadway workers and achieving a safer environment for both roadway maintenance operators and the public have been a challenging problem. In 2017 alone, a total of 158,000 total crashes occurred in our nation's work zones, accounting for 61,000 injuries. The Autonomous Truck Mounted Attenuator (ATMA) vehicle, sometimes referred to as an Autonomous Impact Protection Vehicle (AIPV), offers a promising solution to eliminate injuries to Department of Transportation (DOT) employees.
+
+  This manuscript presents the evaluation methodology for the ATMA system, as well as the field-testing outcomes in Sedalia, MO. To the best of our knowledge, our manuscript is the first academic research that focused on ATMA. The ATMA system was first reviewed, and then followed by an introduction to field-testing procedures that included descriptions of test cases and data collected, and their format. Analysis methodology was then proposed to quantitatively evaluate the system's performance, and statistical models and hypothesis testing procedures were developed and presented. The numeric analysis results, from real-world field-testing under a controlled environment, were presented, and the ATMA system's performance was summarized. This manuscript can serve as a reference for transportation agencies that are interested in deploying similar technologies or by academic researchers to assess characteristics of autonomous vehicles and to apply knowledge gained in transportation modeling and simulation practices.
 key_numbers:
   - { value: "31", label: "test scenarios, each repeated three times" }
   - { value: "±6 in", label: "lateral accuracy in most maneuvers, the MoDOT criterion" }
@@ -36,6 +45,11 @@ We designed a field testing program with Missouri DOT in 2019, conducted at Fort
 - **Following accuracy**: straight roads, curves, lane changes, roundabouts, bump obstacles, U-turns
 - **Obstacle detection**: front and side collision avoidance
 - **Emergency situations**: emergency stops, human takeover, simulated rear impact, temporary vehicle drop and catch-up
+
+<figure>
+  <div class="yt"><button type="button" data-yt="SXMpkDJ_uG8" aria-label="Play video: Missouri DOT field testing of the ATMA system"><img src="https://i.ytimg.com/vi/SXMpkDJ_uG8/hqdefault.jpg" alt="" loading="lazy" /><span class="yt-play"><svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M0 0l14 8-14 8z" fill="currentColor" /></svg>Play video</span></button></div>
+  <figcaption>Field testing with Missouri DOT: the driverless follow truck tracks the lead truck through the test scenarios.</figcaption>
+</figure>
 
 <figure>
   <img src="/media/av-atma-field-testing-trr-2021/test-design.png" alt="Diagram: 31 tests split into results that can be observed directly, such as emergency stops, and results that need statistics, such as lane accuracy measured by cross track error" loading="lazy" />

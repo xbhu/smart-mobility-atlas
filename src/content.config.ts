@@ -20,6 +20,12 @@ const atlas = defineCollection({
     title: z.string().optional(),
     // One sentence: what the paper found or made possible.
     tldr: z.string(),
+    // Institutions as printed on the paper, and for each author (in lab-site order) the
+    // 1-based indexes of their institutions, e.g. [[1], [2, 1], [1]].
+    affiliations: z.array(z.string()).optional(),
+    author_affiliations: z.array(z.array(z.number().int().min(1))).optional(),
+    // The paper's abstract, shown folded under the story for readers who want the original.
+    abstract: z.string().optional(),
     // Lead image or video under the title. Use one of image, youtube or video.
     hero: z
       .object({

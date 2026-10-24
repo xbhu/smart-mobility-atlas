@@ -1,0 +1,46 @@
+---
+// Centered paper header: title, authors with affiliation marks, venue, and resource buttons.
+import type { LabPaper } from "../lib/lab";
+import Resources from "./Resources.astro";
+import { ui, type Lang } from "../lib/i18n";
+interface Props {
+  paper: LabPaper;
+  lang: Lang;
+  title: string;
+  affiliations?: string[];
+  authorAffiliations?: number[][];
+  zhPath?: string;
+  enPath?: string;
+}
+const { paper, lang, title, affiliations = [], authorAffiliations = [], zhPath, enPath } = Astro.props;
+const t = ui[lang];
+const marks = (i: number) => (affiliations.length > 1 ? (authorAffiliations[i] ?? []).join(",") : "");
+const vol = [paper.volume && `${paper.volume}${paper.issue ? `(${paper.issue})` : ""}`, paper.pages].filter(Boolean).join(", ");
+const status = paper.status === "accepted" ? t.accepted : paper.status === "under-review" ? t.underReview : null;
+---
+<header class="paper-header">
+  <div class="paper-header-inner">
+    <p class="paper-venue">
+      <span class="venue-name">{paper.venue}</span><span class="sep">·</span>{paper.year}{vol && <><span class="sep">·</span>{vol}</>}{status && <><span class="sep">·</span>{status}</>}
+    </p>
+    <h1 class="paper-title">{title}</h1>
+    {lang === "zh" && title !== paper.title && <p class="paper-title-en" lang="en">{paper.title}</p>}
+    <p class="paper-authors" lang="en">
+      {paper.authors.map((a, i) => (
+        <span class="paper-author">
+          {a.profile_url ? <a href={a.profile_url}>{a.name}</a> : <span>{a.name}</span>}
+          {(marks(i) || a.corresponding) && <sup>{marks(i)}{a.corresponding && "*"}</sup>}
+        </span>
+      ))}
+    </p>
+    {affiliations.length > 0 && (
+      <p class="paper-affils" lang="en">
+        {affiliations.map((aff, i) => (
+          <span>{affiliations.length > 1 && <sup>{i + 1}</sup>}{aff}</span>
+        ))}
+        <span class="paper-corr"><sup>*</sup>{t.corresponding}</span>
+      </p>
+    )}
+    <Resources paper={paper} lang={lang} zhPath={zhPath} enPath={enPath} />
+  </div>
+</header>
