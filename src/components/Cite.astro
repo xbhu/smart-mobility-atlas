@@ -1,0 +1,48 @@
+---
+// APA and BibTeX for the paper, with a copy button.
+import type { LabPaper } from "../lib/lab";
+import { apaHtml, bibtex } from "../lib/cite";
+import { ui, type Lang } from "../lib/i18n";
+interface Props { paper: LabPaper; lang: Lang }
+const { paper, lang } = Astro.props;
+const t = ui[lang];
+---
+<section class="cite" aria-labelledby="cite-h" data-copied={t.copied} data-copy={t.copy}>
+  <h2 id="cite-h">{t.cite}</h2>
+  <div class="cite-tabs" role="tablist">
+    <button type="button" role="tab" id="tab-apa" aria-controls="cite-apa" aria-selected="true">APA</button>
+    <button type="button" role="tab" id="tab-bib" aria-controls="cite-bib" aria-selected="false">BibTeX</button>
+  </div>
+  <div class="cite-panel" id="cite-apa" role="tabpanel" aria-labelledby="tab-apa">
+    <div class="cite-box"><p data-copy-source set:html={apaHtml(paper)} /><button type="button" class="cite-copy">{t.copy}</button></div>
+  </div>
+  <div class="cite-panel" id="cite-bib" role="tabpanel" aria-labelledby="tab-bib" hidden>
+    <div class="cite-box"><pre data-copy-source>{bibtex(paper)}</pre><button type="button" class="cite-copy">{t.copy}</button></div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>(".cite").forEach((root) => {
+    const tabs = root.querySelectorAll<HTMLButtonElement>("[role=tab]");
+    tabs.forEach((tab) =>
+      tab.addEventListener("click", () => {
+        tabs.forEach((x) => {
+          const on = x === tab;
+          x.setAttribute("aria-selected", String(on));
+          root.querySelector<HTMLElement>(`#${x.getAttribute("aria-controls")}`)!.hidden = !on;
+        });
+      }),
+    );
+    root.querySelectorAll<HTMLButtonElement>(".cite-copy").forEach((btn) =>
+      btn.addEventListener("click", async () => {
+        const text = btn.parentElement?.querySelector<HTMLElement>("[data-copy-source]")?.innerText ?? "";
+        try {
+          await navigator.clipboard.writeText(text);
+          btn.textContent = root.dataset.copied ?? "Copied";
+          setTimeout(() => (btn.textContent = root.dataset.copy ?? "Copy"), 1800);
+        } catch {
+          /* clipboard unavailable: the text is still selectable */
+        }
+      }),
+    );
+  });
+</script>

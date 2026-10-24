@@ -1,0 +1,10 @@
+---
+import PaperPage from "../../components/PaperPage.astro";
+import { atlasPages, type AtlasPage } from "../../lib/pages";
+
+export async function getStaticPaths() {
+  return (await atlasPages()).filter((p) => p.zh).map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+const { page } = Astro.props as { page: AtlasPage };
+---
+<PaperPage page={page} lang="zh" />

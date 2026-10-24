@@ -61,3 +61,14 @@ export const ui = {
     accepted: "已录用",
   },
 } as const;
+
+// Chinese names of the research thrusts (Atlas only; the lab site is English-only).
+export const thrustNameZh: Record<string, string> = {
+  "automated-driving": "自动驾驶与协同驾驶",
+  "work-zone-automation": "施工区自动化（ATMA）",
+  electrification: "交通电气化",
+  "system-modeling": "交通系统建模",
+};
+
+export const thrustName = (t: { id: string; name: string }, lang: Lang) =>
+  lang === "zh" ? (thrustNameZh[t.id] ?? t.name) : t.name;

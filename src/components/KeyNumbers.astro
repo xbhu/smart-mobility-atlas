@@ -1,0 +1,10 @@
+---
+import { ui, type Lang } from "../lib/i18n";
+interface Props { items: { value: string; label: string }[]; lang: Lang }
+const { items, lang } = Astro.props;
+---
+<ul class="numbers" aria-label={ui[lang].keyNumbers}>
+  {items.map((n) => (
+    <li><span class="numbers-value">{n.value}</span><span class="numbers-label">{n.label}</span></li>
+  ))}
+</ul>

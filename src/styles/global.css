@@ -95,6 +95,7 @@ a.thrust-tag:hover { filter: brightness(1.08); text-decoration: none; }
 .byline .corr { color: var(--lane); }
 .venue { font: 600 0.95rem / 1.45 var(--font-sign); color: #b9c6d8; margin: 0; max-width: none; }
 .venue em { color: #dfe6f0; }
+.sep { display: inline-block; margin: 0 0.45em; }
 
 .tldr { margin: 28px 0 0; padding: 4px 0 4px 20px; border-left: 4px solid var(--lane); max-width: 62ch; }
 .tldr-label { display: block; font: 800 0.78rem var(--font-sign); letter-spacing: 0.08em; text-transform: uppercase; color: var(--lane); margin-bottom: 6px; }
@@ -219,7 +220,7 @@ figcaption, .caption { font: 600 0.88rem / 1.45 var(--font-sign); color: var(--m
 .footer-head { font: 700 0.95rem var(--font-sign); color: var(--white); margin: 0 0 8px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
 .site-footer li { margin: 4px 0; }
-.footer-note { margin-top: 36px; padding-top: 18px; border-top: 2px dashed rgba(245, 183, 0, 0.5); font-size: 0.9rem; color: #9fb0c8; }
+.footer-note { max-width: none; margin-top: 36px; padding-top: 18px; border-top: 2px dashed rgba(245, 183, 0, 0.5); font-size: 0.9rem; color: #9fb0c8; }
 
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }

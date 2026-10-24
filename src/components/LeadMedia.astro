@@ -1,0 +1,34 @@
+---
+// The lead image or video of a page: an image, a site-hosted video, or click-to-load YouTube.
+import { ui, type Lang } from "../lib/i18n";
+interface Props { hero: any; lang: Lang; title: string; caption?: string }
+const { hero, lang, title } = Astro.props;
+const caption = Astro.props.caption ?? hero.caption;
+const t = ui[lang];
+---
+<figure>
+  {hero.youtube ? (
+    <div class="yt">
+      <button type="button" data-yt={hero.youtube} data-start={hero.start} aria-label={`${t.playVideo}: ${hero.alt ?? title}`}>
+        <img src={hero.poster ?? `https://i.ytimg.com/vi/${hero.youtube}/hqdefault.jpg`} alt="" />
+        <span class="yt-play">
+          <svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M0 0l14 8-14 8z" fill="currentColor" /></svg>
+          {t.playVideo}
+        </span>
+      </button>
+    </div>
+  ) : hero.video ? (
+    <div class="media-frame">
+      {hero.loop ? (
+        <video src={hero.video} poster={hero.poster} muted loop playsinline autoplay preload="metadata" aria-label={hero.alt ?? title}></video>
+      ) : (
+        <video src={hero.video} poster={hero.poster} controls playsinline preload="none" aria-label={hero.alt ?? title}></video>
+      )}
+    </div>
+  ) : hero.image ? (
+    <div class="media-frame"><img class="lead-image" src={hero.image} alt={hero.alt ?? ""} /></div>
+  ) : null}
+  {(caption || hero.credit) && (
+    <figcaption>{caption}{hero.credit && <span class="credit"> {lang === "zh" ? "来源：" : "Credit: "}{hero.credit}</span>}</figcaption>
+  )}
+</figure>

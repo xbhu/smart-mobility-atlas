@@ -5,7 +5,11 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
-const date = z.string().regex(/^\d{4}-\d{2}(-\d{2})?$/, "use YYYY-MM or YYYY-MM-DD");
+// YAML reads 2026-10-24 as a date; keep it as the text "2026-10-24".
+const date = z.union([
+  z.date().transform((d) => d.toISOString().slice(0, 10)),
+  z.string().regex(/^\d{4}-\d{2}(-\d{2})?$/, "use YYYY-MM or YYYY-MM-DD"),
+]);
 
 const atlas = defineCollection({
   loader: glob({ pattern: "*/{en,zh}.md", base: "./src/content/atlas" }),

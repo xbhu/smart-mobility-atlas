@@ -1,0 +1,107 @@
+---
+// A full Atlas page in one language: title band, lead media, key numbers, the story, and the rail.
+import { render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Byline from "./Byline.astro";
+import Resources from "./Resources.astro";
+import LeadMedia from "./LeadMedia.astro";
+import KeyNumbers from "./KeyNumbers.astro";
+import AuthorRail from "./AuthorRail.astro";
+import Cite from "./Cite.astro";
+import Card from "./Card.astro";
+import { atlasPages, pageImage, pagePath, type AtlasPage } from "../lib/pages";
+import { ui, thrustName, type Lang } from "../lib/i18n";
+
+interface Props { page: AtlasPage; lang: Lang }
+const { page, lang } = Astro.props;
+const t = ui[lang];
+const { paper, thrust } = page;
+const entry = lang === "zh" && page.zh ? page.zh : page.en;
+const d = entry.data;
+const hero = page.en.data.hero; // media is shared; captions can be translated
+const caption = lang === "zh" ? (d.hero?.caption ?? hero?.caption) : hero?.caption;
+const title = lang === "zh" && d.title ? d.title : paper.title;
+const { Content } = await render(entry);
+
+const alternates = { en: pagePath(page.slug, "en"), ...(page.zh ? { zh: pagePath(page.slug, "zh") } : {}) };
+const related = (await atlasPages()).filter((p) => p.slug !== page.slug && p.thrust.id === thrust.id).slice(0, 3);
+const updated = d.updated ?? page.en.data.updated;
+const image = pageImage(page) ?? undefined;
+const jsonld = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: d.tldr,
+  inLanguage: lang === "zh" ? "zh-CN" : "en",
+  url: new URL(pagePath(page.slug, lang), Astro.site).toString(),
+  ...(image ? { image: new URL(image, Astro.site).toString() } : {}),
+  ...(updated ? { dateModified: updated } : {}),
+  publisher: { "@type": "Organization", name: "Penn State Smart Mobility Lab", url: "https://lab.mobilitypsu.com" },
+  about: {
+    "@type": "ScholarlyArticle",
+    name: paper.title,
+    author: paper.authors.map((a) => ({ "@type": "Person", name: a.name, ...(a.profile_url ? { url: a.profile_url } : {}) })),
+    datePublished: String(paper.year),
+    isPartOf: { "@type": "Periodical", name: paper.venue },
+    ...(paper.doi ? { sameAs: `https://doi.org/${paper.doi}`, identifier: `doi:${paper.doi}` } : {}),
+  },
+};
+---
+<Base title={title} description={d.tldr} lang={lang} image={image} alternates={alternates} jsonld={jsonld}>
+  <article>
+    <header class:list={["band", { "band--has-media": Boolean(hero) }]}>
+      <div class="wrap">
+        <p class="crumbs">
+          <a href="/">{t.atlas}</a>
+          <span class="crumbs-sep" aria-hidden="true">/</span>
+          <a class="thrust-tag" data-thrust={thrust.id} href={`/#${thrust.id}`}>{thrustName(thrust, lang)}</a>
+        </p>
+        <h1>{title}</h1>
+        {lang === "zh" && d.title && <p class="venue" lang="en" style="margin-bottom: 10px">{paper.title}</p>}
+        <div lang="en"><Byline paper={paper} lang={lang} /></div>
+        <div class="tldr">
+          <span class="tldr-label">{t.inOneSentence}</span>
+          <p>{d.tldr}</p>
+        </div>
+        <Resources paper={paper} lang={lang} />
+      </div>
+    </header>
+
+    {hero && (
+      <div class="wrap lead-media">
+        <LeadMedia hero={hero} lang={lang} title={title} caption={caption} />
+      </div>
+    )}
+
+    <div class="wrap">
+      {d.key_numbers && d.key_numbers.length > 0 && <KeyNumbers items={d.key_numbers} lang={lang} />}
+      <div class="paper-body">
+        <div class="prose"><Content /></div>
+        <aside class="rail">
+          <AuthorRail paper={paper} lang={lang} />
+          <Cite paper={paper} lang={lang} />
+          <section aria-labelledby="more-h">
+            <h2 id="more-h">{t.resources}</h2>
+            <ul class="rail-links">
+              <li><a href={thrust.url}>{t.thrustOnLab} →</a></li>
+              {page.zh && <li><a href={pagePath(page.slug, lang === "zh" ? "en" : "zh")}>{lang === "zh" ? "Read in English" : "阅读中文版"}</a></li>}
+            </ul>
+            {updated && <p class="rail-note">{t.updated} {updated}</p>}
+          </section>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="section section--concrete" aria-labelledby="related-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="related-h">{t.moreIn} {lang === "en" && thrustName(thrust, lang)}</h2>
+          <a class="more" href={`/#${thrust.id}`}>{t.allPapers} →</a>
+        </div>
+        <ul class="cards">{related.map((p) => <Card page={p} lang={lang} />)}</ul>
+      </div>
+    </section>
+  )}
+</Base>

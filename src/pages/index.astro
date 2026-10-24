@@ -1,11 +1,60 @@
 ---
 import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import { lab } from "../lib/lab";
+import { atlasPages } from "../lib/pages";
+
+const pages = await atlasPages();
+const { thrusts } = await lab();
+const groups = thrusts.map((t, i) => ({
+  thrust: t,
+  num: String(i + 1).padStart(2, "0"),
+  pages: pages.filter((p) => p.thrust.id === t.id),
+}));
+const withPages = groups.filter((g) => g.pages.length > 0);
+const upcoming = groups.filter((g) => g.pages.length === 0);
 ---
-<Base description="Plain-language guides to the representative research of the Penn State Smart Mobility Lab.">
+<Base description="Plain-language guides to the representative research of the Penn State Smart Mobility Lab: the problem, what we did, what we found, and links to the paper, code, data and slides.">
   <section class="band index-intro">
     <div class="wrap">
       <h1>Research Atlas</h1>
-      <p class="lede">Plain-language guides to the Smart Mobility Lab's representative research.</p>
+      <p class="lede">
+        Plain-language guides to the Smart Mobility Lab's representative research. Each page explains
+        the problem a paper set out to solve, what we did and found, and who can use it, with links to
+        the paper, code, data and slides. Selected pages are also available in Chinese.
+      </p>
+      <ul class="thrust-jump">
+        {withPages.map((g) => (
+          <li><a href={`#${g.thrust.id}`}>{g.thrust.name} <span class="count">{g.pages.length}</span></a></li>
+        ))}
+      </ul>
     </div>
   </section>
+
+  {withPages.map((g, i) => (
+    <section class:list={["section", "thrust-section", { "section--concrete": i % 2 === 1 }]} id={g.thrust.id} aria-labelledby={`h-${g.thrust.id}`}>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id={`h-${g.thrust.id}`}><span class="thrust-num" aria-hidden="true">{g.num}</span>{g.thrust.name}</h2>
+            <p>{g.thrust.tagline}</p>
+          </div>
+          <a class="more" href={g.thrust.url}>This thrust on the lab website →</a>
+        </div>
+        <ul class="cards">{g.pages.map((p) => <Card page={p} />)}</ul>
+      </div>
+    </section>
+  ))}
+
+  {upcoming.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <p class="soon">
+          Pages in preparation: {upcoming.map((g, i) => (
+            <>{i > 0 && " · "}<a href={g.thrust.url}>{g.thrust.name}</a></>
+          ))}.
+        </p>
+      </div>
+    </section>
+  )}
 </Base>

@@ -1,0 +1,27 @@
+---
+// One Atlas page as a card (home page, "more in this thrust").
+import { pageImage, pagePath, type AtlasPage } from "../lib/pages";
+import type { Lang } from "../lib/i18n";
+interface Props { page: AtlasPage; lang?: Lang }
+const { page, lang = "en" } = Astro.props;
+const entry = lang === "zh" && page.zh ? page.zh : page.en;
+const title = lang === "zh" && page.zh?.data.title ? page.zh.data.title : page.paper.title;
+const img = pageImage(page);
+---
+<li>
+  <a class="card" href={pagePath(page.slug, lang === "zh" && page.zh ? "zh" : "en")}>
+    <span class="card-media">
+      {img && <img src={img} alt="" loading="lazy" />}
+      <span class="card-year">{page.paper.year}</span>
+    </span>
+    <span class="card-body">
+      <span class="card-title">{title}</span>
+      <span class="card-tldr">{entry.data.tldr}</span>
+      <span class="card-meta">
+        <span>{page.paper.venue_short ?? page.paper.venue}</span>
+        {page.zh && lang === "en" && <span class="zh" lang="zh-CN">中文版</span>}
+        {page.en.data.draft && <span>DRAFT</span>}
+      </span>
+    </span>
+  </a>
+</li>
