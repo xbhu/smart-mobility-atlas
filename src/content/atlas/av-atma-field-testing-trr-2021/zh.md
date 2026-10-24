@@ -4,7 +4,7 @@ tldr: >-
   我们为施工区无人驾驶跟随车（ATMA）设计了一套实地测试方案和三层统计评估框架；密苏里DOT的测试表明，
   跟随车在大多数工况下与领航车的横向偏差保持在±6英寸以内，双路通信同时中断时1.9秒内完全停车。
 hero:
-  caption: 领航-跟随系统：右侧为人工驾驶的领航车，左侧为尾部装有卡车防撞缓冲器（TMA）的无人驾驶跟随车，两车通过车辆间通信（V2V）协同。
+  caption: 现场演示中，驾驶室空无一人（见右上角小画面）的ATMA跟随车紧跟在划线车后方行驶。
 key_numbers:
   - { value: "31", label: "个测试场景，每项重复三次" }
   - { value: "±6 英寸", label: "大多数工况下的横向精度，即密苏里DOT的性能标准" }
@@ -17,7 +17,23 @@ updated: 2026-10-24
 
 公路养护工人每天都面临严重的安全风险。划线、补坑、冲洗桥梁等移动作业需要在高速公路上低速行驶，这种工况极易引发交通事故。仅2017年一年，美国施工区域(Work Zone, 以下简称工区)就发生了158,000起交通事故，造成61,000人受伤，其中许多是各州交通运输厅（DOT）的工作人员。
 
+<figure class="figure-row">
+  <img src="/media/av-atma-field-testing-trr-2021/road-painting.jpg" alt="双车道公路上低速行驶、正在施划中心线的划线车" loading="lazy" />
+  <img src="/media/av-atma-field-testing-trr-2021/tma-crash-2017.jpg" alt="追尾事故后前部严重损毁的皮卡与密苏里DOT橙色作业车" loading="lazy" />
+  <figcaption>左：移动式划线作业。右：2017年1月，一辆密苏里DOT卡车防撞缓冲车被后方车辆追尾。</figcaption>
+</figure>
+
+<blockquote class="pull-quote">
+  <p>“我们当时在US-50公路上补坑，我开车跟在补坑车后面。我发现一辆卡车越来越近，就打开了警示灯，想让他换到超车道。他没有换道，直接撞上了我所在的防撞缓冲车，把我推出去一百多英尺。我们俩都被送进了医院。那段时间我没法抱我的孩子，也没法陪他们玩，就因为别人的疏忽。这件事很严重，这关乎我们的生命安全。”</p>
+  <footer>密苏里DOT养护工人Michael Suber，谈2017年1月的追尾事故</footer>
+</blockquote>
+
 **自动驾驶卡车防撞缓冲车（ATMA）**系统正是为消除这一风险而设计的。它采用**领航-跟随协同自动驾驶（CDA）**架构：由人工驾驶的领航车（LT）执行养护作业，无人驾驶的跟随车（FT）通过车辆间通信（V2V）自动跟踪领航车的位置、速度和行驶方向。跟随车尾部安装有卡车防撞缓冲器（TMA）——一旦发生追尾碰撞，TMA将承受冲击，从而保护DOT工作人员的人身安全。该系统在严格限定的作业环境中运行（低速移动作业、封闭或管控车道），是目前最具实际落地前景的自动驾驶技术应用场景之一。
+
+<figure>
+  <img src="/media/av-atma-field-testing-trr-2021/leader-follower-system.jpg" alt="搭载防撞缓冲器的无人驾驶跟随车与人工驾驶的领航车，两车之间以无线信号相连" loading="lazy" />
+  <figcaption>领航-跟随系统：左侧为尾部装有防撞缓冲器的无人驾驶跟随车，右侧为人工驾驶的领航车，两车通过车辆间通信（V2V）协同。图片来源：Royal Truck &amp; Equipment。</figcaption>
+</figure>
 
 到2019年，包括科罗拉多州和密苏里州在内的多个州DOT已开始购置和部署ATMA车辆。但一个关键问题仍未得到解答：**该系统在真实条件下的实际表现如何？我们又该如何严格地量化评估？** 此前尚无学术评估框架。本文正是为填补这一空白而作。
 
@@ -34,9 +50,10 @@ ATMA系统允许操作员设置关键运行参数，例如领航车与跟随车�
 - **障碍物检测**：前方及侧方防碰撞
 - **紧急情况**：紧急停车、人工接管、模拟追尾冲击、临时脱离与追回
 
-<figure>
-  <div class="yt"><button type="button" data-yt="SXMpkDJ_uG8" aria-label="播放视频：ATMA系统在密苏里DOT的实地测试"><img src="https://i.ytimg.com/vi/SXMpkDJ_uG8/hqdefault.jpg" alt="" loading="lazy" /><span class="yt-play"><svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M0 0l14 8-14 8z" fill="currentColor" /></svg>播放视频</span></button></div>
-  <figcaption>与密苏里DOT合作的实地测试：无人驾驶跟随车在各测试场景中跟踪领航车。</figcaption>
+<figure class="figure-row">
+  <img src="/media/av-atma-field-testing-trr-2021/modot-lead-truck.jpg" alt="装有GPS天线和传感器的密苏里DOT橙色领航车" loading="lazy" />
+  <img src="/media/av-atma-field-testing-trr-2021/modot-follow-truck.jpg" alt="尾部装有Scorpion II卡车防撞缓冲器的密苏里DOT跟随车，旁边有作业人员" loading="lazy" />
+  <figcaption>实地测试使用的密苏里DOT车辆：左为领航车，右为装有防撞缓冲器的跟随车。</figcaption>
 </figure>
 
 <figure>
@@ -74,3 +91,13 @@ ATMA系统允许操作员设置关键运行参数，例如领航车与跟随车�
 - **正在评估ATMA采购的DOT**：本文提供了一套完整的测试方案和性能基准，可直接参考或根据实际需求调整。
 - **已部署ATMA的DOT**：统计评估框架可用于持续监测系统性能，及时发现性能退化。
 - **研究AV实地评估的学者**：本文方法适用于任何在受限、明确定义的运行设计域（ODD）内运行的领航-跟随或CDA系统。
+
+<figure>
+  <img src="/media/av-atma-field-testing-trr-2021/pooled-fund-states.png" alt="美国地图，参与州以蓝色标出，包括宾夕法尼亚、科罗拉多、明尼苏达、得克萨斯和加利福尼亚" loading="lazy" />
+  <figcaption>参与TPF-5(380)自动化养护技术联合基金（pooled fund）的州。该基金支持ATMA的测试与部署。</figcaption>
+</figure>
+
+<figure>
+  <div class="media-frame"><video src="/media/av-atma-field-testing-trr-2021/live-demo.mp4" poster="/media/av-atma-field-testing-trr-2021/live-demo-poster.jpg" controls playsinline preload="none" aria-label="ATMA划线作业现场演示"></video></div>
+  <figcaption>划线作业现场演示完整视频（52秒，有声音）。视频来源：Royal Truck &amp; Equipment。</figcaption>
+</figure>
