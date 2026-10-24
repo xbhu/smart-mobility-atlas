@@ -68,8 +68,6 @@ a:hover { text-decoration-thickness: 2px; }
 .header-nav { display: flex; align-items: center; gap: clamp(12px, 2.4vw, 26px); font: 700 0.95rem var(--font-sign); }
 .header-nav a { color: var(--navy); text-decoration: none; padding: 6px 0; border-bottom: 3px solid transparent; }
 .header-nav a:hover, .header-nav a[aria-current="page"] { border-bottom-color: var(--lane); }
-.header-nav .lang { border: 2px solid var(--navy); border-radius: 999px; padding: 4px 12px; }
-.header-nav .lang:hover { background: var(--navy); color: var(--white); border-bottom-color: var(--navy); }
 @media (max-width: 640px) {
   .wordmark-unit, .header-nav .hide-sm { display: none; }
 }

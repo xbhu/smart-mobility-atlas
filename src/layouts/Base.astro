@@ -22,8 +22,6 @@ const siteName = "Smart Mobility Research Atlas";
 const pageTitle = title ? `${title} | ${siteName}` : `${siteName} | Penn State Smart Mobility Lab`;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const ogImage = new URL(image ?? "/media/og-default.jpg", Astro.site).toString();
-const other: Lang = lang === "en" ? "zh" : "en";
-const switchTo = alternates?.[other];
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/zh/";
 ---
 <!doctype html>
@@ -65,7 +63,6 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/zh/";
         <nav class="header-nav" aria-label="Main">
           <a href="/" aria-current={isHome ? "page" : undefined}>{t.allPapers}</a>
           <a class="hide-sm" href={LAB_URL}>{t.labSite}</a>
-          {switchTo && <a class="lang" href={switchTo} hreflang={other === "zh" ? "zh-CN" : "en"} lang={other === "zh" ? "zh-CN" : "en"}>{t.switchLabel}</a>}
         </nav>
       </div>
     </header>
