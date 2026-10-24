@@ -1,0 +1,121 @@
+---
+import "@fontsource-variable/overpass/wght.css";
+import "@fontsource-variable/source-serif-4/opsz.css";
+import "@fontsource-variable/source-serif-4/opsz-italic.css";
+import "../styles/global.css";
+import { LAB_URL } from "../lib/lab";
+import { ui, type Lang } from "../lib/i18n";
+
+interface Props {
+  title?: string;
+  description: string;
+  lang?: Lang;
+  image?: string;
+  // Paths of the same page in each language, for hreflang and the language switch.
+  alternates?: Partial<Record<Lang, string>>;
+  jsonld?: object;
+  noindex?: boolean;
+}
+const { title, description, lang = "en", image, alternates, jsonld, noindex = false } = Astro.props;
+const t = ui[lang];
+const siteName = "Smart Mobility Research Atlas";
+const pageTitle = title ? `${title} | ${siteName}` : `${siteName} | Penn State Smart Mobility Lab`;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImage = new URL(image ?? "/media/og-default.jpg", Astro.site).toString();
+const other: Lang = lang === "en" ? "zh" : "en";
+const switchTo = alternates?.[other];
+const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/zh/";
+---
+<!doctype html>
+<html lang={lang === "zh" ? "zh-CN" : "en"}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    {alternates && Object.entries(alternates).map(([l, p]) => (
+      <link rel="alternate" hreflang={l === "zh" ? "zh-CN" : "en"} href={new URL(p!, Astro.site).toString()} />
+    ))}
+    {alternates?.en && <link rel="alternate" hreflang="x-default" href={new URL(alternates.en, Astro.site).toString()} />}
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title ?? siteName} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={title ? "article" : "website"} />
+    <meta property="og:locale" content={lang === "zh" ? "zh_CN" : "en_US"} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23001e44'/%3E%3Crect x='14' y='4' width='4' height='7' fill='%23f5b700'/%3E%3Crect x='14' y='13' width='4' height='7' fill='%23f5b700'/%3E%3Crect x='14' y='22' width='4' height='7' fill='%23f5b700'/%3E%3C/svg%3E" />
+    {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
+  </head>
+  <body>
+    <a class="skip" href="#main">{t.skip}</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" href="/" aria-label={`${siteName}, home`}>
+          <span class="wordmark-mark" aria-hidden="true">
+            <svg width="20" height="22" viewBox="0 0 20 22"><rect x="8" y="0" width="4" height="5" fill="#f5b700" /><rect x="8" y="8.5" width="4" height="5" fill="#f5b700" /><rect x="8" y="17" width="4" height="5" fill="#f5b700" /></svg>
+          </span>
+          <span class="wordmark-text">
+            <span class="wordmark-name">Research Atlas</span>
+            <span class="wordmark-unit">Smart Mobility Lab · Penn State</span>
+          </span>
+        </a>
+        <nav class="header-nav" aria-label="Main">
+          <a href="/" aria-current={isHome ? "page" : undefined}>{t.allPapers}</a>
+          <a class="hide-sm" href={LAB_URL}>{t.labSite}</a>
+          {switchTo && <a class="lang" href={switchTo} hreflang={other === "zh" ? "zh-CN" : "en"} lang={other === "zh" ? "zh-CN" : "en"}>{t.switchLabel}</a>}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer" lang="en">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-name">Smart Mobility Research Atlas</p>
+            <p>Plain-language guides to the research of the Penn State Smart Mobility Lab, Department of Civil &amp; Environmental Engineering.</p>
+          </div>
+          <div>
+            <p class="footer-head">The lab</p>
+            <ul>
+              <li><a href={LAB_URL}>Lab website</a></li>
+              <li><a href={`${LAB_URL}/research/`}>Research thrusts</a></li>
+              <li><a href={`${LAB_URL}/publications/`}>Publications</a></li>
+              <li><a href={`${LAB_URL}/people/`}>People</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-head">Elsewhere</p>
+            <ul>
+              <li><a href="https://github.com/xbhu">GitHub</a></li>
+              <li><a href="https://scholar.google.com/citations?hl=en&user=-2GgVTMAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a></li>
+              <li><a href="https://www.youtube.com/@smartmobilitylabatpennstat1251">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-note">© {new Date().getFullYear()} Penn State Smart Mobility Lab, The Pennsylvania State University.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Click-to-load YouTube: the iframe (and YouTube's cookies) load only after a click.
+      document.querySelectorAll<HTMLButtonElement>(".yt button[data-yt]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const start = btn.dataset.start ? `&start=${btn.dataset.start}` : "";
+          const iframe = document.createElement("iframe");
+          iframe.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0${start}`;
+          iframe.title = btn.getAttribute("aria-label") ?? "Video";
+          iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+          iframe.allowFullscreen = true;
+          btn.replaceWith(iframe);
+        });
+      });
+    </script>
+  </body>
+</html>

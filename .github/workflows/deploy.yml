@@ -1,0 +1,49 @@
+name: Deploy Atlas to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # Weekly rebuild picks up paper metadata edited on the lab site.
+  schedule:
+    - cron: "17 9 * * 1"
+  # The lab site sends this after it deploys, so paper metadata edited there shows up here too.
+  repository_dispatch:
+    types: [lab-site-updated]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Paper metadata and thrusts are read from https://lab.mobilitypsu.com/data/*.json.
+      - run: npm run build
+      - name: Check internal links, anchors and media
+        run: python3 tools/check_site.py dist .
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

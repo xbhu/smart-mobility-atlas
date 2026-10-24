@@ -1,0 +1,19 @@
+{
+  "name": "smart-mobility-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Smart Mobility Research Atlas (atlas.mobilitypsu.com): one plain-language page per representative paper",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro sync"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "@fontsource-variable/overpass": "5.3.0",
+    "@fontsource-variable/source-serif-4": "5.3.1",
+    "astro": "7.4.1"
+  }
+}

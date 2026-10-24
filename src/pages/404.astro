@@ -1,0 +1,15 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Page not found" description="This page of the Smart Mobility Research Atlas does not exist." noindex>
+  <section class="band">
+    <div class="wrap">
+      <h1>Page not found</h1>
+      <p>The page may have moved. <a href="/">Browse all Atlas pages</a> or visit the <a href="https://lab.mobilitypsu.com">lab website</a>.</p>
+    </div>
+  </section>
+  <script is:inline>
+    // Old Jekyll pages that were not papers (e.g. /av.html) go to the Atlas home page.
+    if (/\.html$/.test(location.pathname)) location.replace("/");
+  </script>
+</Base>
