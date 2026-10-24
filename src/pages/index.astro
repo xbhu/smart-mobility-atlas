@@ -57,7 +57,6 @@ const total = pages.length + upcoming.length;
         <p class="lead-tldr">{featured.en.data.tldr}</p>
         <p class="lead-actions">
           <a class="btn-pill" href={pagePath(featured.slug)}>Read the story <span aria-hidden="true">→</span></a>
-          {featured.zh && <a class="btn-pill btn-pill--ghost" href={pagePath(featured.slug, "zh")} lang="zh-CN">中文版</a>}
         </p>
       </div>
     </section>
