@@ -8,7 +8,7 @@ hero:
   image: /media/system-modeling-pan-vdf-review/i405-speed-heatmap.png
   alt: Heatmap of speeds at twelve detectors along I-405 from 11:30 to 19:30; a wide red band of speeds near 20 mph runs from mid-afternoon to about 18:30
   caption: Speeds along the I-405 study corridor in Los Angeles through one afternoon. Each row is a loop detector; the red band is the bottleneck queue a volume-delay function has to turn into travel time.
-  credit: From the paper (data from Caltrans PeMS)
+  credit: Pan et al. (2025) · Caltrans PeMS
 affiliations:
   - The Pennsylvania State University
   - North Carolina State University
