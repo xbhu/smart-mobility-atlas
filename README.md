@@ -23,6 +23,10 @@ Monday, and on demand (Actions → Deploy Atlas → Run workflow) to pick up lab
 
 1. Make sure the paper exists on the lab site, with its links filled in (`code`, `data`, `slides`,
    `pdf`, `video`, `website`), and set `atlas_slug: <slug>` there so the lab site links to the page.
+   Every page offers a PDF. Use our own manuscript from before the publisher's proofing (never
+   the publisher-typeset PDF). If the paper has no repo holding it, add it here as
+   `public/media/<slug>/<Author>_<Year>_<Short>_<Venue>.pdf` and point the lab site's `pdf` at
+   `https://atlas.mobilitypsu.com/media/<slug>/<file>.pdf`.
 2. Create `src/content/atlas/<slug>/en.md`. The slug is the URL: `atlas.mobilitypsu.com/<slug>/`.
    It is usually the lab site's paper id; if not, add `paper: <lab paper id>`.
 

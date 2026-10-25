@@ -202,6 +202,13 @@ a.thrust-tag:hover { filter: brightness(1.08); text-decoration: none; }
 .compare-table tbody th { font-weight: 700; color: var(--ink); }
 .compare-table tbody th span { display: block; font-weight: 600; font-size: 0.8rem; color: var(--muted); }
 .compare-table tr.is-highlight { background: var(--concrete); }
+.compare-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.compare-table.is-compact { min-width: 0; }
+/* A tall, narrow diagram, kept at a readable size instead of stretched to the column. */
+.figure-narrow img { display: block; width: 100%; max-width: 440px; margin: 0 auto; }
+/* A prompt or other text sent to a model, shown as it was written. */
+.prompt-box { margin: 0; padding: 18px 22px; background: var(--concrete); border-left: 4px solid var(--navy); border-radius: 0 8px 8px 0; font: 0.86rem / 1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.prompt-box .prompt-image { display: inline-block; padding: 0 6px; border-radius: 4px; background: var(--navy); color: var(--white); font-weight: 700; }
 
 .abstract { margin-top: 48px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .abstract summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 12px; padding: 18px 0; }
