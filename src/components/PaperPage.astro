@@ -83,11 +83,11 @@ const jsonld = {
       {d.key_numbers && d.key_numbers.length > 0 && <KeyNumbers items={d.key_numbers} lang={lang} />}
     </section>
 
+    {en.press && <PressStrip press={en.press} lang={lang} />}
+
     <div class="story prose">
       <Content />
     </div>
-
-    {en.press && <PressStrip press={en.press} lang={lang} />}
 
     {en.abstract && (
       <section class="story">
