@@ -11,8 +11,9 @@ interface Props {
   authorAffiliations?: number[][];
   zhPath?: string;
   enPath?: string;
+  press?: { name: string; url: string }[];
 }
-const { paper, lang, title, affiliations = [], authorAffiliations = [], zhPath, enPath } = Astro.props;
+const { paper, lang, title, affiliations = [], authorAffiliations = [], zhPath, enPath, press = [] } = Astro.props;
 const t = ui[lang];
 const marks = (i: number) => (affiliations.length > 1 ? (authorAffiliations[i] ?? []).join(",") : "");
 const vol = [paper.volume && `${paper.volume}${paper.issue ? `(${paper.issue})` : ""}`, paper.pages].filter(Boolean).join(", ");
@@ -42,5 +43,15 @@ const status = paper.status === "accepted" ? t.accepted : paper.status === "unde
       </p>
     )}
     <Resources paper={paper} lang={lang} zhPath={zhPath} enPath={enPath} />
+    {press.length > 0 && (
+      <div class="press-row">
+        <span class="press-label">{t.inTheNews}</span>
+        <ul class="press-list">
+          {press.map((p) => (
+            <li><a href={p.url} rel="noopener" lang={/[\u4e00-\u9fff]/.test(p.name) ? "zh-CN" : undefined}>{p.name}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
   </div>
 </header>
