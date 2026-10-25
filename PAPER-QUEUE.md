@@ -3,7 +3,7 @@
 Ranked list of the papers that get an Atlas page, in the order XB will build them. Pages are done
 one at a time with the `atlas-paper-page` skill, each in its own thread. Rank is the order below.
 
-- Only papers from XB's own group (the Google Drive research set). Claude updates this file every time a page goes live.
+- Only papers from XB's own group (the Google Drive research set). Claude updates this file every time a page goes live: a finished paper is checked off and stays in the list.
 - `slug` is the lab-site paper id; the live page is `https://atlas.mobilitypsu.com/<slug>/`.
 - `[ ]` = Coming soon card only. `[x]` = page live (with date).
 - Marks in citations: `#` student or postdoc author, `*` corresponding author.
@@ -92,15 +92,3 @@ one at a time with the `atlas-paper-page` skill, each in its own thread. Rank is
   Hu, X.\*, Chiu, Y.C., Zhu, L. (2015). Behavior Insights for Incentive-Based Active Demand Management Platform. International Journal of Transportation Science and Technology. Volume 4, Issue 2, Pages 119-133. https://doi.org/10.1260/2046-0430.4.2.119
 - [ ] **41.** `hu-vacant-taxi-routing-trr-2012`
   Hu, X., Gao, S., Chiu, Y.C., Lin, D.Y. (2012). Modeling Routing Behavior for Vacant Taxi Cabs in Urban Traffic Networks. Transportation Research Record: Journal of the Transportation Research Board. Volume 2284, Issue 1, Pages 81-88. https://doi.org/10.3141%2F2284-10
-
-## Live pages outside this queue
-
-These were built earlier and are not part of the ranked list.
-
-- [x] `av-atma-field-testing-trr-2021`: Evaluation Methodology of Leader-Follower Autonomous Vehicle System for Work Zone Maintenance (TRR 2021)
-- [x] `hav-policy-trt-2026`: Highly Automated Vehicle Policy in the United States (TR Today 2026)
-
-## Not in this queue but still shown as Coming soon on the Atlas home page
-
-- `li-ccfm-scenario-generation-eccv-2026`: CCFM (ECCV 2026)
-- `atma-toolkit-usdot-2025`: Autonomous Truck Mounted Attenuator (ATMA) Toolkit
