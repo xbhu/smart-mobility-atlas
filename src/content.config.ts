@@ -43,7 +43,9 @@ const atlas = defineCollection({
     // Three to five headline numbers, e.g. { value: "1.9 s", label: "to a full stop when both radios fail" }.
     key_numbers: z.array(z.object({ value: z.string(), label: z.string() })).max(5).optional(),
     // Media coverage of the paper, shown as a row of links under the resource buttons.
-    press: z.array(z.object({ name: z.string(), url: z.string().url() })).optional(),
+    press: z
+      .array(z.object({ name: z.string(), url: z.string().url(), image: z.string().optional(), date: z.string().optional(), alt: z.string().optional() }))
+      .optional(),
     // Shown as the lead story on the home page (the most recently updated featured page wins).
     featured: z.boolean().optional(),
     updated: date.optional(),

@@ -9,6 +9,7 @@ import PaperHeader from "./PaperHeader.astro";
 import LeadMedia from "./LeadMedia.astro";
 import KeyNumbers from "./KeyNumbers.astro";
 import Cite from "./Cite.astro";
+import PressStrip from "./PressStrip.astro";
 import Card from "./Card.astro";
 import { atlasPages, pageImage, pagePath, type AtlasPage } from "../lib/pages";
 import { ui, thrustName, type Lang } from "../lib/i18n";
@@ -85,6 +86,8 @@ const jsonld = {
     <div class="story prose">
       <Content />
     </div>
+
+    {en.press && <PressStrip press={en.press} lang={lang} />}
 
     {en.abstract && (
       <section class="story">

@@ -1,0 +1,49 @@
+---
+// "In the news": a horizontally scrolling strip of cards, one per outlet that has a screenshot.
+import { ui, type Lang } from "../lib/i18n";
+interface Press { name: string; url: string; image?: string; date?: string; alt?: string }
+interface Props { press: Press[]; lang: Lang }
+const { press, lang } = Astro.props;
+const t = ui[lang];
+const items = press.filter((p) => p.image);
+const fmt = (d: string) => {
+  const dt = new Date(`${d}T12:00:00Z`);
+  return isNaN(+dt) ? d : dt.toLocaleDateString(lang === "zh" ? "zh-CN" : "en-US", { year: "numeric", month: lang === "zh" ? "numeric" : "short", day: "numeric", timeZone: "UTC" });
+};
+---
+{items.length > 0 && (
+  <section class="press-strip" aria-labelledby="press-h" data-press-strip>
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="press-h">{t.inTheNews}</h2>
+        <div class="press-nav">
+          <button type="button" data-dir="-1" aria-label={t.pressPrev}>←</button>
+          <button type="button" data-dir="1" aria-label={t.pressNext}>→</button>
+        </div>
+      </div>
+      <ul class="press-track" tabindex="0" aria-label={t.inTheNews}>
+        {items.map((p) => (
+          <li class="press-card">
+            <a href={p.url} rel="noopener">
+              <img src={p.image} alt={p.alt ?? p.name} loading="lazy" />
+              <span class="press-meta">
+                <span class="press-name" lang={/[\u4e00-\u9fff]/.test(p.name) ? "zh-CN" : undefined}>{p.name}</span>
+                {p.date && <span class="press-date">{fmt(p.date)}</span>}
+              </span>
+              <span class="press-go">{t.readStory} →</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}
+<script>
+  document.querySelectorAll<HTMLElement>("[data-press-strip]").forEach((root) => {
+    const track = root.querySelector<HTMLElement>(".press-track");
+    if (!track) return;
+    root.querySelectorAll<HTMLButtonElement>(".press-nav button").forEach((b) =>
+      b.addEventListener("click", () => track.scrollBy({ left: Number(b.dataset.dir) * track.clientWidth * 0.8, behavior: "smooth" }))
+    );
+  });
+</script>

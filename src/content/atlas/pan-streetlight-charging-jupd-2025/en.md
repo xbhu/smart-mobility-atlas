@@ -19,14 +19,14 @@ key_numbers:
   - { value: "+11.9%", label: "more gasoline avoided per charging session than at regular stations" }
   - { value: "$13k–45k", label: "installation cost per site, depending on electrical upgrades" }
 press:
-  - { name: "Penn State News", url: "https://www.psu.edu/news/engineering/story/lighting-way-electric-vehicles-using-streetlamps-chargers" }
-  - { name: "Tech Briefs", url: "https://www.techbriefs.com/component/content/article/54104-using-street-lamps-as-ev-chargers" }
-  - { name: "Yahoo", url: "https://www.yahoo.com/news/articles/streetlights-could-answer-low-cost-210700670.html" }
+  - { name: "Penn State News", url: "https://www.psu.edu/news/engineering/story/lighting-way-electric-vehicles-using-streetlamps-chargers", image: "/media/pan-streetlight-charging-jupd-2025/news-pennstate.jpg", date: "2025-10-01", alt: "Penn State News story: Lighting the way for electric vehicles by using streetlamps as chargers" }
+  - { name: "Yahoo", url: "https://www.yahoo.com/news/articles/streetlights-could-answer-low-cost-210700670.html", image: "/media/pan-streetlight-charging-jupd-2025/news-yahoo.jpg", alt: "Yahoo News story with a photo of an electric car charging at a streetlight" }
   - { name: "MSN", url: "https://www.msn.com/en-us/money/technologyinvesting/penn-state-turns-streetlights-into-ev-chargers-to-boost-urban-access/ar-AA1NYYdP" }
+  - { name: "Tech Briefs", url: "https://www.techbriefs.com/component/content/article/54104-using-street-lamps-as-ev-chargers", image: "/media/pan-streetlight-charging-jupd-2025/news-techbriefs.jpg", date: "2025-10-29", alt: "Tech Briefs story: Using Street Lamps as EV Chargers" }
   - { name: "Asianet News", url: "https://newsable.asianetnews.com/international/science/penn-state-turns-streetlights-into-smart-low-cost-ev-chargers-electric-vehicles-articleshow-hci6m43" }
-  - { name: "Newsbreak", url: "https://www.newsbreak.com/earth-com-2402525/4274515734333-streetlights-could-power-the-future-of-electric-vehicle-charging" }
-  - { name: "凤凰网", url: "https://tech.ifeng.com/c/8nAaE6eUkJs" }
-  - { name: "新浪", url: "https://finance.sina.com.cn/tech/digi/2025-10-04/doc-infssrzs4429800.shtml" }
+  - { name: "Newsbreak", url: "https://www.newsbreak.com/earth-com-2402525/4274515734333-streetlights-could-power-the-future-of-electric-vehicle-charging", image: "/media/pan-streetlight-charging-jupd-2025/news-newsbreak.jpg", date: "2025-10-05", alt: "Newsbreak story: Streetlights could power the future of electric vehicle charging" }
+  - { name: "新浪", url: "https://finance.sina.com.cn/tech/digi/2025-10-04/doc-infssrzs4429800.shtml", image: "/media/pan-streetlight-charging-jupd-2025/news-sina.jpg", date: "2025-10-04", alt: "新浪科技报道：美国团队将路灯改造成电动汽车充电桩，成本远低于商业用桩且更环保" }
+  - { name: "凤凰网", url: "https://tech.ifeng.com/c/8nAaE6eUkJs", image: "/media/pan-streetlight-charging-jupd-2025/news-ifeng.jpg", date: "2025-10-04", alt: "凤凰网科技报道：美国团队将路灯改造成电动车充电桩：成本远低于商业用桩且更环保" }
 updated: 2026-10-25
 ---
 
