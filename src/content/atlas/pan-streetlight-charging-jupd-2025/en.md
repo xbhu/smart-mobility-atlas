@@ -1,8 +1,8 @@
 ---
 tldr: >-
-  We built a framework for choosing, testing and evaluating streetlight-mounted EV chargers, used it
-  to place 23 chargers in Kansas City, Missouri, and found over a year of use that they charged
-  slightly faster than regular stations and avoided about 12% more gasoline per charging session.
+  We built an equity-focused framework for choosing which streetlights to turn into EV chargers, used
+  it to place 23 chargers in Kansas City, Missouri, and found over a year of use that each charging
+  session avoided about 12% more gasoline than at regular stations.
 hero:
   image: /media/pan-streetlight-charging-jupd-2025/streetlight-charger-car.jpg
   alt: A small blue electric car parked at the curb on a city street, plugged into a charger mounted on a streetlight pole
@@ -71,7 +71,7 @@ The shortlist then met the street. Virtual GIS checks and in-person visits remov
 
 ## What are the key findings?
 
-**Streetlight chargers keep up with regular chargers.** The worry with streetlights is power: can a pole built for a lamp charge a car well? Over 2023, the median streetlight session charged at **6.53 kW**, compared with **6.00 kW** at regular Level 2 stations, and a Mann-Whitney U test found the difference statistically significant. Most streetlight sessions fell between 4 and 6 kW.
+**Charging speed is comparable to regular stations.** The worry with streetlights is power: can a pole built for a lamp charge a car well? Over 2023, the median streetlight session charged at **6.53 kW**, compared with **6.00 kW** at regular Level 2 stations, and most streetlight sessions fell between 4 and 6 kW. Streetlight chargers did not charge more slowly than the regular chargers they were compared with.
 
 **Drivers stay a shorter time.** The median streetlight session lasted **2.23 hours**, against **3.84 hours** at regular stations, and almost none ran past five hours, while some regular sessions lasted up to a day. On-street parking limits and parking costs are the likely reasons; for a city, shorter stays mean each curbside charger can serve more cars.
 
