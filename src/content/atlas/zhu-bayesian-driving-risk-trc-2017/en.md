@@ -108,6 +108,6 @@ These results rest on self-reported crash histories and assume that adults' driv
 - **Fair treatment of new customers:** a new driver gets a first estimate from their profile alone, which is then updated as GPS data arrive. The width of the range tells the insurer how much to trust it.
 - **Driver feedback and safety programs:** the results point to specific places and habits, such as keeping pace with traffic on ramps and driving smoothly on freeways, that feedback can target.
 
-A [companion page](/hu-ubi-contextual-risk-ietits-2019/) describes a related study from the same project that scores trips by comparing each driver's speed with the surrounding traffic.
+Two companion pages from the same project use the same kind of contextual data in other ways: [one scores trips by comparing each driver's speed with the surrounding traffic](/hu-ubi-contextual-risk-ietits-2019/), and [another shows how an insurer can turn such data into car insurance prices](/ma-ubi-rate-making-tra-2018/).
 
 This work was supported by the Federal Highway Administration's Pay-As-You-Drive-And-You-Save (PAYDAYS) Insurance Actuarial Study.
