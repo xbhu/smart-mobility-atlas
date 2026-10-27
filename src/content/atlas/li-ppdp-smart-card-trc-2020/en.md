@@ -104,4 +104,4 @@ We built four test data sets from the Shenzhen data, from 393,552 to 845,727 rid
 - **Other trajectory data.** The same approach applies directly to other location traces, such as data from navigation apps, ridesharing services and social media check-ins.
 - **Policy makers.** The re-identification numbers in this paper are a concrete reminder that “anonymized” travel data still carry real privacy risk.
 
-Future work will look at choosing the tree height and the budget and threshold settings automatically, and at data structures other than the prefix tree.
+Future work will look at choosing the tree height and the budget and threshold settings automatically, and at data structures other than the prefix tree. A later study from the lab takes up the budget question on the same Shenzhen data: [how to split a fixed privacy budget for transit trip data](/chen-ppdp-privacy-budget-tits-2023/).
