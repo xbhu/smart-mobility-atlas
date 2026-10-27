@@ -35,15 +35,13 @@ one at a time with the `atlas-paper-page` skill, each in its own thread. Rank is
   Hu, X. \*, Yuan, Y., Zhu, X., Yang, H., Xie, K. (2019). Behavioral Responses to Pre-Planned Road Capacity Reduction Based on Smartphone GPS Trajectory Data - A Functional Data Analysis Approach. Journal of Intelligent Transportation Systems: Technology, Planning, and Operations. 23, 133-143. https://doi.org/10.1080/15472450.2018.1488133
 - [ ] **13.** `ma-ubi-rate-making-tra-2018`
   Ma, Y.L., Zhu, X., Hu, X.\*, Chiu, Y.C. (2018). The Use of Context-Sensitive Insurance Telematics Data in Auto Insurance Rate Making. Transportation Research Part A: Policy and Practice. Volume 113, Pages 243-258. https://doi.org/10.1016/j.tra.2018.04.013
-- [ ] **14.** `an-network-partitioning-mfd-tits-2018`
-  An, K., Chiu, Y.C., Hu, X., and Chen, X. (2018) "A Network Partitioning Algorithmic Approach for Macroscopic Fundamental Diagram-Based Hierarchical Traffic Network Management." IEEE Transactions on Intelligent Transportation Systems. Volume 19, Issue 4, Pages 1130-1139. https://doi.org/10.1109/TITS.2017.2713808
-- [ ] **15.** `hu-od-calibration-tits-2017`
+- [ ] **14.** `hu-od-calibration-tits-2017`
   Hu, X.\*, Chiu Y.C., Villalobos, J., Nava, E. (2017). "A Sequential Decomposition Framework and Method for Calibrating Dynamic Origin-Destination Demand in a Congested Network." IEEE Transactions on Intelligent Transportation Systems. Volume 18, Issue 10, Pages 2790-2797. https://doi.org/10.1109/TITS.2017.2661751
-- [ ] **16.** `hu-behavior-induced-so-tdm-jits-2017`
+- [ ] **15.** `hu-behavior-induced-so-tdm-jits-2017`
   Hu, X.\*, Chiu, Y.C., Shelton, J. (2017). Development of a Behaviorally Induced System Optimal Travel Demand Management System. Journal of Intelligent Transportation Systems: Technology, Planning, and Operations. Volume 21, Issue 1, pages 12-25. https://doi.org/10.1080/15472450.2016.1171151
-- [ ] **17.** `zhu-bayesian-driving-risk-trc-2017`
+- [ ] **16.** `zhu-bayesian-driving-risk-trc-2017`
   Zhu, X., Yuan, Y., Hu, X., Chiu, Y.C., and Ma, Y.L. (2017). "A Bayesian Network model for contextual versus non-contextual driving behavior assessment." Transportation Research Part C: Emerging Technologies. Volume 81, Pages 172-187. 2017. https://doi.org/10.1016/j.trc.2017.05.015
-- [ ] **18.** `hu-incentive-adm-ijtst-2015`
+- [ ] **17.** `hu-incentive-adm-ijtst-2015`
   Hu, X.\*, Chiu, Y.C., Zhu, L. (2015). Behavior Insights for Incentive-Based Active Demand Management Platform. International Journal of Transportation Science and Technology. Volume 4, Issue 2, Pages 119-133. https://doi.org/10.1260/2046-0430.4.2.119
-- [ ] **19.** `hu-vacant-taxi-routing-trr-2012`
+- [ ] **18.** `hu-vacant-taxi-routing-trr-2012`
   Hu, X., Gao, S., Chiu, Y.C., Lin, D.Y. (2012). Modeling Routing Behavior for Vacant Taxi Cabs in Urban Traffic Networks. Transportation Research Record: Journal of the Transportation Research Board. Volume 2284, Issue 1, Pages 81-88. https://doi.org/10.3141%2F2284-10
