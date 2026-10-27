@@ -120,4 +120,4 @@ We also noticed that links of the **same road type** tend to land in the same su
 
 The study partitions one moment, 8:00 AM, on simulated traffic. Because congestion moves through the day, the next step is a **dynamic** partition with a time-varying λ; the 100-link minimum also deserves calibration, and region growing could be combined with graph-cut methods to balance subnetwork sizes.
 
-Transportation network and demand data came from the Pima Association of Governments (PAG).
+Transportation network and demand data came from the Pima County Association of Governments (PAG).
