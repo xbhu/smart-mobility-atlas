@@ -154,6 +154,6 @@ The study has limits. No study driver had an accident during the 18 months of da
 - **Any GPS source**: the data came from smartphones, but the method applies just as well to plug-in on-board diagnostics (OBD) devices or black boxes that record at the same one-second rate.
 - **Fairer, safer driving incentives**: pricing context-aware habits rewards drivers for keeping pace with traffic rather than for simply avoiding a fixed top speed, and gives agencies such as FHWA evidence for pay-as-you-drive programs that encourage safer, less driving.
 
-A companion paper, [Advancing Usage Based Insurance](/hu-ubi-contextual-risk-ietits-2019/), builds driver-level scores from the same kind of contextual data and groups drivers by their driving style.
+Two companion pages from the same project use the same kind of contextual data in other ways: [one builds driver-level scores and groups drivers by driving style](/hu-ubi-contextual-risk-ietits-2019/), and [another turns each driver's GPS points into a crash-risk estimate with a Bayesian network](/zhu-bayesian-driving-risk-trc-2017/).
 
 This research was supported by the Federal Highway Administration's Pay-As-You-Drive-And-You-Save (PAYDAYS) Insurance Actuarial Study, contract DTFH61-13-C-00033.
