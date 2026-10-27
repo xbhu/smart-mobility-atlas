@@ -14,8 +14,7 @@ hero:
   caption: >-
     The model links what a driver's phone records to that driver's crash history through two hidden
     layers: driving behavior and crash risk. The yellow readings are the context. Remove them and the
-    same model becomes the non-contextual version we compared against.
-  credit: Diagram based on Figure 2 of the paper
+    same model becomes the non-contextual version we compared against. Diagram based on Figure 2 of the paper.
 affiliations:
   - Metropia, Inc.
   - University of Arizona
@@ -65,12 +64,12 @@ The core of the paper is a hierarchical **Bayesian network**: a chain of linked 
 2. **From behavior to crash risk.** A regression links that profile, plus age, gender and annual mileage, to the driver's expected number of crashes per year.
 3. **From crash risk to crash history.** Each driver's reported crashes are treated as a random count that depends on their risk and on how many years of driving the history covers.
 
-Two design choices make this work on real data. First, habits are learned **road type by road type**. When GPS points from all roads are pooled, speed patterns form an irregular, spread-out cloud; on freeways alone they form one tight cluster. So the model keeps six road types apart: freeway, ramp, arterial, highway, minor road and HOV lane.
+Two design choices make this work on real data. First, habits are learned **road type by road type**. When GPS points from all roads are pooled, the core of the speed pattern is lopsided and irregular; on freeways alone it is one smooth oval. So the model keeps six road types apart: freeway, ramp, arterial, highway, minor road and HOV lane.
 
 <figure class="figure-row">
-  <img src="/media/zhu-bayesian-driving-risk-trc-2017/speed-mixed-roads.jpg" alt="Density map of GPS points, speeding value across and speed difference from traffic up. With all road types mixed, the bright area is irregular and stretched, with a long faint tail to the lower left" loading="lazy" />
-  <img src="/media/zhu-bayesian-driving-risk-trc-2017/speed-freeway-only.jpg" alt="The same density map for freeway points only. The bright area forms a single compact oval near the center" loading="lazy" />
-  <figcaption>Each map shows where GPS points fall by speed compared with the limit (across) and compared with surrounding traffic (up). Left: all road types mixed. Right: freeways only, a single compact cluster. Image: from the paper.</figcaption>
+  <img src="/media/zhu-bayesian-driving-risk-trc-2017/speed-mixed-roads.jpg" alt="Density map of GPS points, speeding value across and speed difference from traffic up. With all road types mixed, the bright core is lopsided and irregular, with a narrow streak toward the upper right" loading="lazy" />
+  <img src="/media/zhu-bayesian-driving-risk-trc-2017/speed-freeway-only.jpg" alt="The same density map for freeway points only. The bright core is a single smooth oval near the center, with a faint haze to the left" loading="lazy" />
+  <figcaption>Each map shows where GPS points fall by speed compared with the limit (across) and compared with surrounding traffic (up). Left: all road types mixed. Right: freeways only, a single smooth core. Image: from the paper.</figcaption>
 </figure>
 
 Second, the Bayesian approach copes with uneven data. A driver with few GPS points is not ignored. Their estimate starts from what is typical, based on a database of over 10 million trajectory points from more than 2,000 drivers, and moves toward their own habits as data accumulate. The result is not a single risk score but a **range of likely values**, which narrows as the app collects more driving data.
