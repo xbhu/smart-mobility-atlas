@@ -29,35 +29,33 @@ one at a time with the `atlas-paper-page` skill, each in its own thread. Rank is
   Cheng, Y.#, Hu, X.\*, Chen, K., Yu, X., Luo, Y. (2023). Online Longitudinal Trajectory Planning for Connected and Autonomous Vehicles in Mixed Traffic Flow with Deep Reinforcement Learning Approach. Journal of Intelligent Transportation Systems Technology Planning and Operations. Volume 27, Issue 3, Pages 396-410. https://doi.org/10.1080/15472450.2022.2046472
 - [ ] **10.** `song-roundabout-capacity-trb-2022`
   Song, Y.#, Hu, X. \*, Lu, J., Zhou, X. (2022). Analytical Approximation and Calibration of Roundabout Capacity: A Merging State Transition-based Modeling Approach. Transportation Research Part B: Methodological. Volume 163, Pages 232-257. https://doi.org/10.1016/j.trb.2022.07.006
-- [ ] **11.** `song-pavement-condition-tits-2022`
-  Song, Y.#, Wang, D., Hu, X., Liu, J. (2022) An Efficient and Explainable Ensemble Learning Model for Asphalt Pavement Condition Prediction Based on LTPP Dataset. IEEE Transactions on Intelligent Transportation Systems. Volume 23, Issue 11, Pages 22084-22093. https://doi.org/10.1109/TITS.2022.3164596
-- [ ] **12.** `tang-atma-operation-guidelines-trr-2022`
+- [ ] **11.** `tang-atma-operation-guidelines-trr-2022`
   Tang, Q.#, Hu, X.\*, Ru, Q. (2022). Development of Operation Guidelines for Leader-Follower Autonomous Maintenance Vehicles at Work Zone Locations. Transportation Research Record: Journal of the Transportation Research Board. 2676(3): 696-711. https://doi.org/10.1177/03611981211056644
-- [ ] **13.** `tang-atma-odd-multilane-trr-2022`
+- [ ] **12.** `tang-atma-odd-multilane-trr-2022`
   Tang, Q.#, Hu, X.\*, Yang, H. (2022). Identification of Operational Design Domain for Autonomous Truck Mounted Attenuator System on Multilane Highways. Transportation Research Record: Journal of the Transportation Research Board. Volume 2676, Issue 12, Pages 1-15. https://doi.org/10.1177/03611981211061555
-- [ ] **14.** `tang-bus-lane-discharge-trb-2021`
+- [ ] **13.** `tang-bus-lane-discharge-trb-2021`
   Tang, Q.#, Hu, X.\*, Lu, J., Zhou, X. (2021). Analytical characterization of multi-state effective discharge rates for bus-only lane conversion scheduling problem. Transportation Research Part B: Methodological, 148, 106-131. https://doi.org/10.1016/j.trb.2021.04.008
-- [ ] **15.** `li-ppdp-smart-card-trc-2020`
+- [ ] **14.** `li-ppdp-smart-card-trc-2020`
   Li, Y.#, Yang, D., Hu, X.\* (2020). A Differential Privacy-Based Privacy-Preserving Data Publishing Algorithm for Transit Smart Card Data. Transportation Research Part C: Emerging Technologies. 115, 102634. https://doi.org/10.1016/j.trc.2020.102634
-- [ ] **16.** `cheng-mcts-mixed-traffic-trr-2020`
+- [ ] **15.** `cheng-mcts-mixed-traffic-trr-2020`
   Cheng, Y.#, Tang, Q.#, Hu, X.\*, Qi, H., Yang, H. (2020). A Monte Carlo Tree Search-Based Mixed Traffic Flow Control Algorithm for Arterial Intersection. Transportation Research Record: Journal of the Transportation Research Board. 2674(8), 167--178. https://doi.org/10.1177%2F0361198120919746
-- [ ] **17.** `hu-departure-time-ijst-2020`
+- [ ] **16.** `hu-departure-time-ijst-2020`
   Hu, X.\*, Zhu. X., Chiu. Y.C., Tang, Q.# (2020). Will Information and Incentive Affect Traveler's Day-to-Day Departure Time Decisions? - An Empirical Study of Decision Making Evolution Process. International Journal of Sustainable Transportation. 14(6), 403--412. https://doi.org/10.1080/15568318.2019.1570402
-- [ ] **18.** `hu-capacity-reduction-gps-jits-2019`
+- [ ] **17.** `hu-capacity-reduction-gps-jits-2019`
   Hu, X. \*, Yuan, Y., Zhu, X., Yang, H., Xie, K. (2019). Behavioral Responses to Pre-Planned Road Capacity Reduction Based on Smartphone GPS Trajectory Data - A Functional Data Analysis Approach. Journal of Intelligent Transportation Systems: Technology, Planning, and Operations. 23, 133-143. https://doi.org/10.1080/15472450.2018.1488133
-- [ ] **19.** `hu-ubi-contextual-risk-ietits-2019`
+- [ ] **18.** `hu-ubi-contextual-risk-ietits-2019`
   Hu, X\*., Zhu, X., Ma, Y.L., Chiu, Y. C., Tang, Q. # (2019). Advancing Usage Based Insurance – A Contextual Driving Risk Modeling and Analysis Approach. IET Intelligent Transport Systems. 13, 453 – 460. 2019. https://doi.org/10.1049/iet-its.2018.5194
-- [ ] **20.** `ma-ubi-rate-making-tra-2018`
+- [ ] **19.** `ma-ubi-rate-making-tra-2018`
   Ma, Y.L., Zhu, X., Hu, X.\*, Chiu, Y.C. (2018). The Use of Context-Sensitive Insurance Telematics Data in Auto Insurance Rate Making. Transportation Research Part A: Policy and Practice. Volume 113, Pages 243-258. https://doi.org/10.1016/j.tra.2018.04.013
-- [ ] **21.** `an-network-partitioning-mfd-tits-2018`
+- [ ] **20.** `an-network-partitioning-mfd-tits-2018`
   An, K., Chiu, Y.C., Hu, X., and Chen, X. (2018) "A Network Partitioning Algorithmic Approach for Macroscopic Fundamental Diagram-Based Hierarchical Traffic Network Management." IEEE Transactions on Intelligent Transportation Systems. Volume 19, Issue 4, Pages 1130-1139. https://doi.org/10.1109/TITS.2017.2713808
-- [ ] **22.** `hu-od-calibration-tits-2017`
+- [ ] **21.** `hu-od-calibration-tits-2017`
   Hu, X.\*, Chiu Y.C., Villalobos, J., Nava, E. (2017). "A Sequential Decomposition Framework and Method for Calibrating Dynamic Origin-Destination Demand in a Congested Network." IEEE Transactions on Intelligent Transportation Systems. Volume 18, Issue 10, Pages 2790-2797. https://doi.org/10.1109/TITS.2017.2661751
-- [ ] **23.** `hu-behavior-induced-so-tdm-jits-2017`
+- [ ] **22.** `hu-behavior-induced-so-tdm-jits-2017`
   Hu, X.\*, Chiu, Y.C., Shelton, J. (2017). Development of a Behaviorally Induced System Optimal Travel Demand Management System. Journal of Intelligent Transportation Systems: Technology, Planning, and Operations. Volume 21, Issue 1, pages 12-25. https://doi.org/10.1080/15472450.2016.1171151
-- [ ] **24.** `zhu-bayesian-driving-risk-trc-2017`
+- [ ] **23.** `zhu-bayesian-driving-risk-trc-2017`
   Zhu, X., Yuan, Y., Hu, X., Chiu, Y.C., and Ma, Y.L. (2017). "A Bayesian Network model for contextual versus non-contextual driving behavior assessment." Transportation Research Part C: Emerging Technologies. Volume 81, Pages 172-187. 2017. https://doi.org/10.1016/j.trc.2017.05.015
-- [ ] **25.** `hu-incentive-adm-ijtst-2015`
+- [ ] **24.** `hu-incentive-adm-ijtst-2015`
   Hu, X.\*, Chiu, Y.C., Zhu, L. (2015). Behavior Insights for Incentive-Based Active Demand Management Platform. International Journal of Transportation Science and Technology. Volume 4, Issue 2, Pages 119-133. https://doi.org/10.1260/2046-0430.4.2.119
-- [ ] **26.** `hu-vacant-taxi-routing-trr-2012`
+- [ ] **25.** `hu-vacant-taxi-routing-trr-2012`
   Hu, X., Gao, S., Chiu, Y.C., Lin, D.Y. (2012). Modeling Routing Behavior for Vacant Taxi Cabs in Urban Traffic Networks. Transportation Research Record: Journal of the Transportation Research Board. Volume 2284, Issue 1, Pages 81-88. https://doi.org/10.3141%2F2284-10
