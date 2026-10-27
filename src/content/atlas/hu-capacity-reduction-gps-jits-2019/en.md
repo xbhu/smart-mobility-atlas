@@ -83,7 +83,7 @@ We fit two logistic regression models (did the driver detour or not, and which p
 
 ## What are the key findings?
 
-**The closure cost almost everyone time, including those who detoured.** For the 539 matched pairs, travel time rose by **5.7 minutes per trip on average, or 27%**, and **79% of trips (428 of 539)** took longer than before. Drivers who detoured fared no better: their trips took **7.0 minutes (31%) longer** than before. Even with one lane closed, MoPac remained the fastest choice for most northbound trips.
+**The closure cost almost everyone time, including those who detoured.** For the 539 matched pairs, travel time rose by **5.7 minutes per trip on average, or 27%**, and **79% of trips (428 of 539)** took longer than before. Drivers who detoured fared no better: their trips took **7.0 minutes (31%) longer** than before. Leaving MoPac, on average, did not save time.
 
 **So why detour? Reliability is a likely reason.** The app's travel time predictions were further off on MoPac during the closure than on the detour routes.
 
