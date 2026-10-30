@@ -79,7 +79,10 @@ const jsonld = {
     )}
 
     <section class="tldr-row">
-      <p class="tldr-text"><span class="tldr-label">TL;DR</span>{d.tldr}</p>
+      <div class="exec-summary">
+        <h2 class="exec-summary-label" id="summary">{t.execSummary}</h2>
+        <p class="exec-summary-text">{d.tldr}</p>
+      </div>
       {d.key_numbers && d.key_numbers.length > 0 && <KeyNumbers items={d.key_numbers} lang={lang} />}
     </section>
 
