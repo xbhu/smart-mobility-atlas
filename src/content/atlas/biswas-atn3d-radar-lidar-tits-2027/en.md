@@ -25,7 +25,9 @@ updated: 2026-10-26
 
 An automated vehicle can only plan around what it has detected. Its perception system has to find every car, pedestrian and cyclist around it and place each one as a 3D box: where it is, how big it is and which way it faces. Close objects are easy. Distant ones are not, because the sensors see them through only a handful of measurements.
 
-In computer vision, anything beyond 30 meters is usually called "long range". On the road, 30 meters is not far at all: at 40 mph on an arterial it is about **1.7 seconds** of travel, and at 75 mph on a freeway about **0.9 seconds**. Long range is everyday driving, and those are the seconds the vehicle has to see, decide and react.
+<blockquote class="pull-quote">
+  <p><strong>In computer vision, anything beyond 30 meters is usually called “long range”.</strong> On the road, 30 meters is not far at all: at 40 mph on an arterial it is about 1.7 seconds of travel, and at 75 mph on a freeway about 0.9 seconds. <strong>Long range is everyday driving, and those are the seconds the vehicle has to see, decide and react.</strong></p>
+</blockquote>
 
 <figure>
   <img src="/media/biswas-atn3d-radar-lidar-tits-2027/near-far-points.png" alt="Bar chart for the View-of-Delft test set. Within 30 meters: 62.8% of objects and 94.4% of LiDAR points, about 344 points per object. Beyond 30 meters: 37.2% of objects but only 5.6% of points, about 34 points per object." loading="lazy" />
