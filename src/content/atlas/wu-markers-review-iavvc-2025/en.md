@@ -20,7 +20,6 @@ key_numbers:
   - { value: "mm-level", label: "positioning reported for magnetic marker systems, unaffected by light, rain, fog or dust" }
   - { value: "1–12 m", label: "read range of passive UHF RFID tags, which still work at high vehicle speeds" }
   - { value: "10–100 m", label: "range of Bluetooth Low Energy (BLE) tags, which also support two-way communication" }
-featured: true
 updated: 2026-10-26
 ---
 

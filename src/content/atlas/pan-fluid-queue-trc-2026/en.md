@@ -24,6 +24,7 @@ key_numbers:
   - { value: "8 h", label: "of over-congestion at the I-405 bottleneck on the study day, from 12:20 to 20:20" }
   - { value: "5.3–9.9%", label: "throughput error (MAPE) across ten weekdays of cross-day tests" }
   - { value: "+25%", label: "more traffic discharged at the low point of the jam when demand and supply are managed together, for the same 30% cut in queue and delay" }
+featured: true
 updated: 2026-10-26
 ---
 

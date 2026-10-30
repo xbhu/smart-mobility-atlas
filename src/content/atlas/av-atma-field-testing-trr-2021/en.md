@@ -24,7 +24,6 @@ key_numbers:
   - { value: "±6 in", label: "lateral accuracy in most maneuvers, the MoDOT criterion" }
   - { value: "1.9 s", label: "to a full stop when both V2V radios fail" }
   - { value: "45 s", label: "of ±6 in tracking without GPS before a controlled stop" }
-featured: true
 updated: 2026-10-24
 ---
 
