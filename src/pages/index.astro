@@ -7,7 +7,7 @@ import Card from "../components/Card.astro";
 import CardUpcoming from "../components/CardUpcoming.astro";
 import LeadMedia from "../components/LeadMedia.astro";
 import { lab } from "../lib/lab";
-import { atlasPages, pagePath } from "../lib/pages";
+import { atlasPages, pagePath, venueYear } from "../lib/pages";
 
 // Set ATLAS_SHOW_UPCOMING=0 to hide papers that do not have a page yet.
 const SHOW_UPCOMING = (process.env.ATLAS_SHOW_UPCOMING ?? "1") !== "0";
@@ -51,7 +51,7 @@ const total = pages.length + upcoming.length;
       <div class="lead-story-text">
         <p class="lead-kicker">
           <span class="thrust-tag" data-thrust={featured.thrust.id}>{featured.thrust.name}</span>
-          <span>{featured.paper.venue} · {featured.paper.year}</span>
+          <span>{venueYear(featured.paper)}</span>
         </p>
         <h2 id="lead-h"><a href={pagePath(featured.slug)}>{featured.paper.title}</a></h2>
         <p class="lead-tldr">{featured.en.data.tldr}</p>
