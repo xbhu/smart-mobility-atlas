@@ -13,6 +13,13 @@ hero:
     red line). Right: in our model the discharge rate sags as the queue grows and recovers as it
     clears, which changes how fast the queue builds (yellow) and drains (green).
   credit: Pan, Hu & Zhou (2026)
+teaser:
+  image: /media/pan-fluid-queue-trc-2026/lead-teaser.png
+  alt: >-
+    Two side-by-side charts of flow rate over time. Left, the classic queue model: when arrivals rise
+    above capacity, the bottleneck discharges at a flat rate, so the queue builds (yellow) and then
+    drains (green). Right, our model: the discharge rate sags below capacity during the jam and
+    recovers as the queue clears, so the queue drains more slowly.
 affiliations:
   - The Pennsylvania State University
   - Arizona State University

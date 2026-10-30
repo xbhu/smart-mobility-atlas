@@ -42,6 +42,7 @@ export async function atlasPages(): Promise<AtlasPage[]> {
 /** Image used for cards and social previews. */
 export function pageImage(p: AtlasPage): string | null {
   const h = p.en.data.hero;
+  if (p.en.data.teaser?.image) return p.en.data.teaser.image;
   if (h?.image) return h.image;
   if (h?.poster) return h.poster;
   if (h?.youtube) return `https://i.ytimg.com/vi/${h.youtube}/hqdefault.jpg`;

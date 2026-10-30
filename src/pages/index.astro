@@ -44,7 +44,9 @@ const total = pages.length + upcoming.length;
   {featured && (
     <section class="lead-story wrap" aria-labelledby="lead-h">
       <div class="lead-story-media">
-        {featured.en.data.hero ? (
+        {featured.en.data.teaser ? (
+          <LeadMedia hero={{ image: featured.en.data.teaser.image, alt: featured.en.data.teaser.alt }} lang="en" title={featured.paper.title} />
+        ) : featured.en.data.hero ? (
           <LeadMedia hero={{ ...featured.en.data.hero, caption: undefined, credit: undefined }} lang="en" title={featured.paper.title} />
         ) : null}
       </div>

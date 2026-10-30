@@ -40,6 +40,9 @@ const atlas = defineCollection({
         credit: z.string().optional(),
       })
       .optional(),
+    // Optional simpler image for the home-page lead story and the cards, when the hero figure is
+    // too detailed to read at small size. 16:9, e.g. 1600x900. The paper page still shows the hero.
+    teaser: z.object({ image: z.string(), alt: z.string().optional() }).optional(),
     // Three to five headline numbers, e.g. { value: "1.9 s", label: "to a full stop when both radios fail" }.
     key_numbers: z.array(z.object({ value: z.string(), label: z.string() })).max(5).optional(),
     // Media coverage of the paper, shown as a row of links under the resource buttons.
