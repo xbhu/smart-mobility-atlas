@@ -34,7 +34,9 @@ updated: 2026-10-27
 
 Insurers, safety programs and driver-feedback apps increasingly judge drivers from the data their cars and phones record. Most of these scores look only at the vehicle itself: how fast it went and how hard it sped up or braked. We call this the **non-contextual** approach.
 
-The trouble is that the same numbers can mean very different things. A driver who keeps stopping and starting may be aggressive, or may just be stuck in heavy traffic. A driver who is always much faster than the cars around them is probably driving more aggressively than most, but you can only tell that if you know how fast the surrounding traffic was moving. A **contextual** approach adds this missing information: the type of road, its speed limit and the live traffic speed at that place and time.
+<blockquote class="pull-quote">
+  <p><strong>The trouble is that the same numbers can mean very different things.</strong> <strong>A driver who keeps stopping and starting may be aggressive, or may just be stuck in heavy traffic.</strong> A driver who is always much faster than the cars around them is probably driving more aggressively than most, but you can only tell that if you know how fast the surrounding traffic was moving. A contextual approach adds this missing information: the type of road, its speed limit and the live traffic speed at that place and time.</p>
+</blockquote>
 
 Two practical problems stand in the way. First, the data are enormous and uneven: one driver in the study had 111,490 GPS points, another 686,355, while each driver has only a handful of crashes, or none. Second, nobody had measured how much context actually helps. This paper builds a model that handles both, and puts a number on the benefit.
 

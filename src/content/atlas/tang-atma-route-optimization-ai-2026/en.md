@@ -37,7 +37,9 @@ But safety for workers has a cost for everyone else. The ATMA typically works at
   <figcaption>The moving bottleneck. The two ATMA trucks (red box) travel at a fraction of the cruising speed, so cars behind them (red) must merge into the remaining lane to get by. From the paper.</figcaption>
 </figure>
 
-When several road segments need maintenance, the agency has to decide **in what order, and along which path, the ATMA should visit them**. Common sense says take the shortest path. But the shortest path may run the slow truck through the busiest roads at the busiest times. Until now there was no network-level method for choosing an ATMA route that keeps the total delay to the traveling public as low as possible.
+<blockquote class="pull-quote">
+  <p>When several road segments need maintenance, the agency has to decide in what order, and along which path, the ATMA should visit them. <strong>Common sense says take the shortest path. But the shortest path may run the slow truck through the busiest roads at the busiest times.</strong> Until now there was no network-level method for choosing an ATMA route that keeps the total delay to the traveling public as low as possible.</p>
+</blockquote>
 
 ## What did we do?
 

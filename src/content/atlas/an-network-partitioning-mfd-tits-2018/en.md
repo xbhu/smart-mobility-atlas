@@ -37,7 +37,11 @@ Traffic engineers know the **fundamental diagram** of a single road: as more car
 
 The MFD is useful because it lets a city manage traffic **area by area**, without modeling every street. If a district is close to the peak of its curve, the city can hold back cars at its edges (perimeter or "gating" control), steer drivers around it, or price entry into it, and keep the whole network moving at its best rate. Modeling tens of thousands of individual links in real time is too slow for that; a handful of area curves is not.
 
-The catch: a clean MFD appears only when traffic inside the area is **fairly uniform**. A real city mixes a jammed downtown with free-flowing suburbs, and an MFD drawn over both turns into a scattered cloud of points. So the city must first be cut into **homogeneous subnetworks**. Earlier methods for this had three practical problems:
+<blockquote class="pull-quote">
+  <p><strong>The catch: a clean MFD appears only when traffic inside the area is fairly uniform.</strong> A real city mixes a jammed downtown with free-flowing suburbs, and an MFD drawn over both turns into a scattered cloud of points. <strong>So the city must first be cut into homogeneous subnetworks.</strong></p>
+</blockquote>
+
+Earlier methods for this had three practical problems:
 
 - They cut the network in two again and again, and stop only at a **number of pieces the user picks in advance**, with no good rule for picking it.
 - They assume **traffic data on every road**. Real cities have detectors on some roads, not all.

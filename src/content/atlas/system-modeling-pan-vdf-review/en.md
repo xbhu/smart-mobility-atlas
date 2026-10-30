@@ -35,7 +35,9 @@ The most common VDF is still the **BPR curve** from the U.S. Bureau of Public Ro
   <figcaption>Why measured volume misleads. In region A (uncongested) speed falls gently as traffic grows. Past capacity, a detector sees only the queue's discharge rate (observed μ, region B). The true demand (estimated D, region C) is beyond what any detector can count and has to be inferred. From the paper.</figcaption>
 </figure>
 
-At the same time, AI models such as LSTMs, graph neural networks and Transformers have become very good at forecasting traffic speeds from sensor data. But they are trained only to match past observations. They can predict vehicles appearing from nowhere, negative delays, or flows above capacity, they are hard to interpret, and they may fail when conditions change, which is exactly when planners need them. Planners are left choosing between transparent curves that are often wrong under congestion and accurate black boxes they cannot fully trust.
+<blockquote class="pull-quote">
+  <p>At the same time, AI models such as LSTMs, graph neural networks and Transformers have become very good at forecasting traffic speeds from sensor data. But they are trained only to match past observations. They can predict vehicles appearing from nowhere, negative delays, or flows above capacity, they are hard to interpret, and <strong>they may fail when conditions change, which is exactly when planners need them.</strong> <strong>Planners are left choosing between transparent curves that are often wrong under congestion and accurate black boxes they cannot fully trust.</strong></p>
+</blockquote>
 
 ## What did we do?
 

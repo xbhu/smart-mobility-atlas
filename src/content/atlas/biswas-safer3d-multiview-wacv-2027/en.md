@@ -25,7 +25,9 @@ updated: 2026-10-25
 
 ## What problem does this research solve?
 
-A self-driving car can only brake for what it sees. At highway speed that means seeing far: a car at 130 km/h (80 mph) needs to spot an obstacle at least **150 meters** ahead to leave enough time to decide and stop safely, and at 60 mph a typical stopping distance is already 73 meters, more on a wet road. What computer-vision papers call "long range", beyond 100 meters, leaves only about 1.8 seconds on the road.
+<blockquote class="pull-quote">
+  <p><strong>A self-driving car can only brake for what it sees.</strong> At highway speed that means seeing far: a car at 130 km/h (80 mph) needs to spot an obstacle at least 150 meters ahead to leave enough time to decide and stop safely, and at 60 mph a typical stopping distance is already 73 meters, more on a wet road. <strong>What computer-vision papers call "long range", beyond 100 meters, leaves only about 1.8 seconds on the road.</strong></p>
+</blockquote>
 
 Far-away objects are not rare. On the Argoverse 2 driving dataset, **54% of labeled objects are more than 50 meters away and 20% are more than 100 meters away**. Beyond 100 meters a car is only a few pixels tall in a camera image, and a LiDAR scanner returns on average fewer than four points per object.
 

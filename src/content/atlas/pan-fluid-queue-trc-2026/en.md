@@ -39,7 +39,9 @@ updated: 2026-10-26
 
 Freeway bottlenecks, such as the merge just past a busy on-ramp, are where most peak-hour delay is born. Traffic engineers estimate how long the queue there will get and how much delay it causes with **queue models**: cars arrive at some rate, the bottleneck lets them out at another, and the difference piles up as a queue. These models are simple, fast and widely used in planning and operations.
 
-They share one assumption, though: once a bottleneck is jammed, it keeps discharging cars at a **constant rate**. Field data say otherwise. When the queue is long and traffic is stop-and-go, merging and lane changing get messier and *fewer* cars make it through per hour. Traffic engineers call this a flow drop or capacity drop. It is the textbook shape of the **fundamental diagram**, the curve linking how many cars are on the road (density) to how many pass a point (flow): beyond a critical density, more cars on the road means less flow, not more.
+<blockquote class="pull-quote">
+  <p><strong>They share one assumption, though: once a bottleneck is jammed, it keeps discharging cars at a constant rate. Field data say otherwise.</strong> When the queue is long and traffic is stop-and-go, merging and lane changing get messier and <em>fewer</em> cars make it through per hour. Traffic engineers call this a flow drop or capacity drop. It is the textbook shape of the fundamental diagram, the curve linking how many cars are on the road (density) to how many pass a point (flow): <strong>beyond a critical density, more cars on the road means less flow, not more.</strong></p>
+</blockquote>
 
 <figure>
   <img src="/media/pan-fluid-queue-trc-2026/i405-speed-heatmap.png" alt="Heat map of speed by time of day for detectors 3 to 14 on I-405; a large dark red block of low speeds runs from about 13:00 to 19:30 across most detectors" loading="lazy" />

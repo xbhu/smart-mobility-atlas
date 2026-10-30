@@ -37,7 +37,9 @@ updated: 2026-10-27
 
 On an arterial street with traffic signals, drivers tend to hurry to the next intersection, brake for the red light, wait, and accelerate again when it turns green. Each stop and restart wastes fuel and time. A car that knew when the light would change could ease off early and arrive just as it turns green.
 
-A **connected and autonomous vehicle (CAV)** can do that. It receives the signal timing from the roadside (vehicle-to-infrastructure communication), including which light is on and how many seconds are left; it knows its distance to the stop line; and it can sense the speed and spacing of the car behind it. On a single lane, the human-driven vehicles (HDVs) behind the CAV cannot pass, so the speed the CAV chooses shapes the trip of every car in its group.
+<blockquote class="pull-quote">
+  <p><strong>A connected and autonomous vehicle (CAV) can do that.</strong> It receives the signal timing from the roadside (vehicle-to-infrastructure communication), including which light is on and how many seconds are left; it knows its distance to the stop line; and it can sense the speed and spacing of the car behind it. <strong>On a single lane, the human-driven vehicles (HDVs) behind the CAV cannot pass, so the speed the CAV chooses shapes the trip of every car in its group.</strong></p>
+</blockquote>
 
 <figure>
   <img src="/media/cheng-mcts-mixed-traffic-trr-2020/basic-interactive-units.png" alt="Two single-lane road sketches running from a start position to a stop line. The top lane has one CAV (shaded box) followed by several plain boxes for human-driven cars; the bottom lane has three CAVs, and dashed boxes group each CAV with the cars directly behind it" loading="lazy" />

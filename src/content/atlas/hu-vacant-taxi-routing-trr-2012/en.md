@@ -32,7 +32,9 @@ updated: 2026-10-27
 
 ## What problem does this research solve?
 
-In many Asian cities, taxis are a large part of the traffic, and much of that traffic is **empty taxis looking for passengers**. A survey by Taiwan's Ministry of Transportation and Communications counted more than **88,000 taxis** in Taiwan, **73.5%** of which regularly cruise the streets for customers. A taxi drives **136.1 km** a day on average, and **54.4 km of it (40%) is driven with no passenger**: about **3.6 empty hours** a day, and about **90 million liters** of fuel a year. In urban Hong Kong, taxis make up about **25%** of all traffic, and **50–60%** at some critical locations. In Shenzhen, China, taxis were found to be empty for **41.6%** of their distance and **49.2%** of their time.
+<blockquote class="pull-quote">
+  <p><strong>In many Asian cities, taxis are a large part of the traffic, and much of that traffic is empty taxis looking for passengers.</strong> A survey by Taiwan's Ministry of Transportation and Communications counted more than 88,000 taxis in Taiwan, 73.5% of which regularly cruise the streets for customers. <strong>A taxi drives 136.1 km a day on average, and 54.4 km of it (40%) is driven with no passenger: about 3.6 empty hours a day, and about 90 million liters of fuel a year.</strong> In urban Hong Kong, taxis make up about 25% of all traffic, and 50–60% at some critical locations. In Shenzhen, China, taxis were found to be empty for 41.6% of their distance and 49.2% of their time.</p>
+</blockquote>
 
 To manage that traffic, or simply to simulate it, we need to know **which streets these empty taxis take**. Traffic models normally assume every vehicle takes the quickest path to its destination. That is a fair assumption for a taxi with a passenger on board. But an empty taxi has no destination. The driver's goal is to **find the next customer as soon as possible**, and the decision is made over and over, at every intersection: which street to take next.
 

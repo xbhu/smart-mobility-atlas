@@ -31,7 +31,9 @@ updated: 2026-10-27
 
 Many cities turn the right-hand lane of a busy street or freeway into a **bus-only lane** at certain times of day. It speeds up buses, but it takes a lane away from cars, which can mean longer queues and more delay for everyone else. A common rule is simple: switch the bus lane on during the peak hours and off the rest of the day. Is that the best schedule? Answering that question needs a reliable estimate of how many vehicles each lane can actually carry, with and without the bus lane.
 
-Traffic engineers usually treat that number, the road's **capacity** or maximum **discharge rate**, as a fixed value read from the fundamental diagram of traffic flow. Real vehicle trajectories say otherwise. When a car cuts into a lane, the driver behind it slows down to keep a safe distance and then falls back. Even after the car moves on, the gap often never closes again, and that unused road space is lost capacity.
+<blockquote class="pull-quote">
+  <p>Traffic engineers usually treat that number, the road's capacity or maximum discharge rate, as a fixed value read from the fundamental diagram of traffic flow. <strong>Real vehicle trajectories say otherwise.</strong> When a car cuts into a lane, the driver behind it slows down to keep a safe distance and then falls back. <strong>Even after the car moves on, the gap often never closes again, and that unused road space is lost capacity.</strong></p>
+</blockquote>
 
 <figure>
   <img src="/media/tang-bus-lane-discharge-trb-2021/lane-changer-headway.png" alt="Two time-space diagrams of many vehicle trajectories drawn as thin lines. In each, two thick black trajectories are a leader and a follower, and a short purple line is a car that cuts in between them and leaves again" loading="lazy" />

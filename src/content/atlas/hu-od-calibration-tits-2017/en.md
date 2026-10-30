@@ -46,7 +46,9 @@ That adjustment is one of the hardest steps in building a DTA model, for two rea
   <figcaption>Why counts alone can mislead. The same hourly count fits two very different traffic states, so a model tuned only to counts can land on the wrong one. Schematic of the traffic flow fundamental diagram, not data.</figcaption>
 </figure>
 
-So a model can match every count and still put the rush hour at the wrong time. Under congestion the count at a bottleneck is capped at the road's capacity, and the vehicles that could not get through are waiting in a queue the count never sees. That hidden part is the **real demand**, and it is what the calibration needs.
+<blockquote class="pull-quote">
+  <p><strong>So a model can match every count and still put the rush hour at the wrong time.</strong> Under congestion the count at a bottleneck is capped at the road's capacity, and the vehicles that could not get through are waiting in a queue the count never sees. <strong>That hidden part is the real demand, and it is what the calibration needs.</strong></p>
+</blockquote>
 
 ## What did we do?
 

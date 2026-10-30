@@ -38,7 +38,9 @@ Drivers feel pavement condition as **roughness**: the bumps and dips that rattle
 
 The standard tool, the equation in the Mechanistic-Empirical Pavement Design Guide (MEPDG), is a straight-line formula built from 1,926 records in the national Long-Term Pavement Performance (LTPP) database. It explains only **56%** of the variation in roughness (R² = 0.56). Straight lines cannot capture how distress, traffic and climate interact, and the factors overlap so much that the formula cannot say which one really matters.
 
-Machine learning models such as neural networks and random forests predict better, but they bring two new problems. They get slow to train as they grow, and they work like **black boxes**: they give a number without saying why. A pavement engineer who has to defend a maintenance budget needs both a good prediction and a reason for it.
+<blockquote class="pull-quote">
+  <p>Machine learning models such as neural networks and random forests predict better, but they bring two new problems. They get slow to train as they grow, and <strong>they work like black boxes: they give a number without saying why.</strong> <strong>A pavement engineer who has to defend a maintenance budget needs both a good prediction and a reason for it.</strong></p>
+</blockquote>
 
 ## What did we do?
 

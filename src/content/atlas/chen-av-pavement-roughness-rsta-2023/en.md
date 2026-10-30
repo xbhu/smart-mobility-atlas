@@ -28,7 +28,9 @@ updated: 2026-10-27
 
 ## What problem does this research solve?
 
-Large-scale deployment of connected and automated vehicles (CAVs) may still be ten or fifteen years away. But pavements and bridges last for decades, so the roads being built and resurfaced today will carry that traffic. Agencies that design and maintain pavements need to know now whether automated traffic will wear roads out faster or slower.
+<blockquote class="pull-quote">
+  <p>Large-scale deployment of connected and automated vehicles (CAVs) may still be ten or fifteen years away. <strong>But pavements and bridges last for decades, so the roads being built and resurfaced today will carry that traffic.</strong> <strong>Agencies that design and maintain pavements need to know now whether automated traffic will wear roads out faster or slower.</strong></p>
+</blockquote>
 
 Automated vehicles drive differently from people. Lane-keeping and lane-centering systems put the car in the middle of the lane almost every time, while human drivers drift from side to side. Earlier studies showed that this **channelized** traffic concentrates wheel loads on a narrow strip and can speed up rutting and cracking. But those studies looked only at lane position, and most simply assumed automated vehicles never deviate from the center line at all. That is unrealistic and can make pavement designs needlessly thick and costly.
 

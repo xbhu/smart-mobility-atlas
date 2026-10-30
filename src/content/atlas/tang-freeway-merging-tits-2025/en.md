@@ -30,7 +30,9 @@ updated: 2026-10-26
 
 Freeway on-ramps are where a lot of congestion, crashes and stop-and-go waves begin. A car coming down the ramp is usually slower than mainline traffic. It speeds up on the short auxiliary lane, looks for a gap and cuts in. Every car behind it on the freeway then has to slow down, and the queue that forms takes time to clear.
 
-Traffic engineers usually estimate queues and delay with a simple rule: the queue grows whenever more cars arrive than the road's **capacity**, a fixed maximum number of cars per hour. Field data show that at a merge this capacity is not fixed. On I-80 in California, a loop detector in a ramp merge area counted *fewer* cars per hour during the morning jam (top of the page). Vehicle trajectories from the same freeway show why.
+<blockquote class="pull-quote">
+  <p>Traffic engineers usually estimate queues and delay with a simple rule: the queue grows whenever more cars arrive than the road's capacity, a fixed maximum number of cars per hour. <strong>Field data show that at a merge this capacity is not fixed.</strong> On I-80 in California, a loop detector in a ramp merge area counted <em>fewer</em> cars per hour during the morning jam (top of the page). Vehicle trajectories from the same freeway show why.</p>
+</blockquote>
 
 <figure>
   <img src="/media/tang-freeway-merging-tits-2025/merge-headway-trajectories.png" alt="Time-space diagram of many vehicle trajectories drawn as thin black lines; two highlighted vehicles show a small time gap before a lane change and a larger gap after it" loading="lazy" />

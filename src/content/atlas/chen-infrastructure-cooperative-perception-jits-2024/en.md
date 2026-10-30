@@ -32,7 +32,11 @@ Automated vehicles see the world through LiDAR, cameras and radar. These sensors
 
 A sensor mounted on the roadside, for example a LiDAR on a pole at an intersection, can help both kinds of vehicles. It sits high, sees the whole intersection and can share the position and speed of every car, cyclist and pedestrian with the connected vehicles nearby (top of the page). For a car without sensors this is the only view it gets; for an automated car it fills in the blind spots.
 
-The catch is **time delay**. The roadside computer needs time to process the point cloud, and the message then has to travel over the wireless link (DSRC or cellular V2X) to the car. Studies cited in the paper report that a popular self-driving software stack takes 200 to 550 milliseconds to detect a traffic light, and that 65% of delays measured in a 4G LTE field test fell between 54 and 81 ms. By the time the message arrives, everything in it is out of date. At 70 mph, a delay of 100 to 250 ms puts an object 10 to 25 feet away from where the message says it is. Earlier work on cooperative driving had studied delay mostly for platoons and for straight-line (longitudinal) motion; how to correct for it when fusing roadside sensor data, for objects that also turn, had not been studied.
+<blockquote class="pull-quote">
+  <p><strong>The catch is time delay.</strong> The roadside computer needs time to process the point cloud, and the message then has to travel over the wireless link (DSRC or cellular V2X) to the car. Studies cited in the paper report that a popular self-driving software stack takes 200 to 550 milliseconds to detect a traffic light, and that 65% of delays measured in a 4G LTE field test fell between 54 and 81 ms. <strong>By the time the message arrives, everything in it is out of date. At 70 mph, a delay of 100 to 250 ms puts an object 10 to 25 feet away from where the message says it is.</strong></p>
+</blockquote>
+
+Earlier work on cooperative driving had studied delay mostly for platoons and for straight-line (longitudinal) motion; how to correct for it when fusing roadside sensor data, for objects that also turn, had not been studied.
 
 ## What did we do?
 

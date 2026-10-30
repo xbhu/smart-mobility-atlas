@@ -27,7 +27,9 @@ updated: 2026-10-25
 
 A self-driving car's LiDAR sweeps laser beams around the vehicle and records a dense cloud of 3D points, scan after scan. **Semantic segmentation** is the step that labels every one of those points: road, sidewalk, car, pedestrian, building, vegetation, pole. Those labels tell the planner where the drivable space ends and what the obstacles are, so when segmentation goes wrong, the error does not stay in the perception module. A misplaced road edge or a missed pedestrian flows straight into driving decisions.
 
-Most segmentation models are trained and tested on clear-day data. In **fog, rain, snow, road spray or dust**, the same model can degrade sharply. That is a practical barrier to deployment: an automated vehicle's operational design domain (ODD), the conditions it is approved to drive in, cannot be extended to bad weather unless its perception can be shown to stay reliable there.
+<blockquote class="pull-quote">
+  <p>Most segmentation models are trained and tested on clear-day data. <strong>In fog, rain, snow, road spray or dust, the same model can degrade sharply.</strong> That is a practical barrier to deployment: <strong>an automated vehicle's operational design domain (ODD), the conditions it is approved to drive in, cannot be extended to bad weather unless its perception can be shown to stay reliable there.</strong></p>
+</blockquote>
 
 The research community has a rich toolbox for making 3D models robust when conditions change, and several surveys of it. But almost all of that work was built and tested for "clear-to-clear" transfers, such as moving from one city, sensor or dataset to another. Adverse weather is a different kind of shift: the scene itself is the same, but **the measurements become unreliable**, with missing returns, false points and range-dependent losses. When papers mix the two kinds of shift, it is hard to tell whether a reported gain comes from handling weather or from general transfer effects. And because papers differ in what adverse-weather data they were allowed to use and how they were evaluated, their numbers are often not comparable.
 

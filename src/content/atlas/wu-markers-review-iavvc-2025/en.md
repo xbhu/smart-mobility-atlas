@@ -25,7 +25,9 @@ updated: 2026-10-26
 
 ## What problem does this research solve?
 
-An automated vehicle has to know, at every moment, exactly where it is and what is around it. It answers those questions with its own sensors: satellite positioning (GNSS) for its place on the map, and cameras, LiDAR and radar for its surroundings. These sensors have improved enormously, but they still struggle in exactly the places where mistakes matter most. GNSS signals fade in tunnels, parking garages and "urban canyons" between tall buildings. Cameras lose detail at night, in glare and in rain. Every sensor is blocked when a truck or a building stands in the way.
+<blockquote class="pull-quote">
+  <p>An automated vehicle has to know, at every moment, exactly where it is and what is around it. It answers those questions with its own sensors: satellite positioning (GNSS) for its place on the map, and cameras, LiDAR and radar for its surroundings. <strong>These sensors have improved enormously, but they still struggle in exactly the places where mistakes matter most.</strong> GNSS signals fade in tunnels, parking garages and "urban canyons" between tall buildings. Cameras lose detail at night, in glare and in rain. Every sensor is blocked when a truck or a building stands in the way.</p>
+</blockquote>
 
 One way around this is to let the road help. **Markers** are small pieces of infrastructure that carry a known identity and sit at a known, surveyed location: a printed pattern on a sign, a magnet set into the pavement, a radio tag on a roadside post. When the vehicle detects one, it gets a fixed reference point that does not drift and does not depend on satellites, which it can use to correct its position, confirm what it is seeing, or check that its own sensors are aligned.
 

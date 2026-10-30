@@ -38,7 +38,9 @@ updated: 2026-10-27
 
 For decades the main answer to traffic congestion was to build more roads. That is expensive, and new lanes tend to fill up again as more traffic is induced. **Travel demand management (TDM)** takes the other route: change *when*, *how* and *whether* people travel, so existing roads carry the load more smoothly.
 
-Most TDM programs, such as vanpooling, ridesharing, transit and teleworking, work for particular groups of commuters. They do little for the large group that drives alone and is unable or unwilling to give up the car. For those drivers, agencies have mostly used the **"stick"**: congestion pricing, toll lanes and parking charges. These can work, but they remain controversial, with open questions about socio-economic equity and about how efficiently road capacity is used.
+<blockquote class="pull-quote">
+  <p>Most TDM programs, such as vanpooling, ridesharing, transit and teleworking, work for particular groups of commuters. <strong>They do little for the large group that drives alone and is unable or unwilling to give up the car.</strong> <strong>For those drivers, agencies have mostly used the "stick": congestion pricing, toll lanes and parking charges.</strong> These can work, but they remain controversial, with open questions about socio-economic equity and about how efficiently road capacity is used.</p>
+</blockquote>
 
 A **"carrot"** is the alternative: reward drivers who leave outside the peak or take a less congested road. Earlier pilots, such as a 13-week Dutch program that paid drivers to avoid the morning rush, showed that rewards can change behavior. But those drivers were not told **how long their trip would take** if they left at a different time or took another route, so they had to rely on experience. Without that information, a driver cannot tell whether a change is worth it, and the time saved is unpredictable. The question this paper asks is whether a system that combines **accurate travel time predictions with rewards** can get everyday car commuters to change their habits, and whether those changes actually save them time.
 

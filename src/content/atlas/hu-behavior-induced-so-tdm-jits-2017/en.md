@@ -36,7 +36,9 @@ updated: 2026-10-27
 
 For decades the standard answer to congestion has been to build more road. It is expensive, and new capacity tends to fill up again as more trips are induced. **Travel demand management** takes the other route: instead of adding supply, it tries to change *when* and *how* people travel, through flexible work hours, ridesharing, transit, and, more recently, smartphone apps.
 
-Navigation apps and other traveler information systems are a natural tool for this, but most of them work in a **passive** way. They tell every driver the same thing ("this road is clear") and each driver reacts on their own. If everyone is sent to the same free-flowing road, it soon jams, and drivers find themselves sitting in a queue again. This is the **herding effect**.
+<blockquote class="pull-quote">
+  <p>Navigation apps and other traveler information systems are a natural tool for this, but most of them work in a passive way. They tell every driver the same thing ("this road is clear") and each driver reacts on their own. <strong>If everyone is sent to the same free-flowing road, it soon jams, and drivers find themselves sitting in a queue again. This is the herding effect.</strong></p>
+</blockquote>
 
 The root of the problem is what a routing app tries to minimize. It gives each driver the path with the **lowest travel time for that driver**. It ignores the delay that this trip adds for everyone else on the same roads, now and later. Traffic engineers call the result **user equilibrium**: every driver is doing the best they can for themselves, but the network as a whole is not doing as well as it could. The alternative, the **system optimum**, is the traffic pattern with the lowest total travel time for everyone. It usually needs some drivers to take a slightly different time or route than they would have picked for themselves, so it has long been seen as hard to put into practice.
 

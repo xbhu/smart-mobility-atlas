@@ -28,11 +28,9 @@ updated: 2026-10-27
 
 ## What problem does this research solve?
 
-Roundabouts are safer than most intersections: traffic flows one way around a central island, there are fewer
-points where vehicles can collide, and speeds stay low. Before an agency decides to build one, or chooses its
-size and shape, it needs to know how much traffic the roundabout can handle. The key number is **entry
-capacity**: the most cars per hour that can enter from one approach when there is always a queue waiting at the
-yield line, ready to take any usable gap in the circulating traffic.
+<blockquote class="pull-quote">
+  <p>Roundabouts are safer than most intersections: traffic flows one way around a central island, there are fewer points where vehicles can collide, and speeds stay low. <strong>Before an agency decides to build one, or chooses its size and shape, it needs to know how much traffic the roundabout can handle.</strong> The key number is entry capacity: the most cars per hour that can enter from one approach when there is always a queue waiting at the yield line, ready to take any usable gap in the circulating traffic.</p>
+</blockquote>
 
 There are two standard ways to estimate it, and both have a weak spot.
 

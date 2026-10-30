@@ -43,7 +43,9 @@ A **connected and autonomous vehicle (CAV)** can do exactly that. It can receive
   <figcaption>Splitting mixed traffic into “basic interactive units”. Each CAV (shaded) leads the human-driven cars behind it (plain boxes) until the next CAV, so a lane with several CAVs (bottom) becomes several small groups, each with one CAV in charge. From the paper.</figcaption>
 </figure>
 
-Earlier methods made this problem easier to solve by simplifying it: assuming that every vehicle is a CAV, or cutting each trajectory into a few segments, each driven at a constant speed or a constant acceleration. Those assumptions make the math tractable but the driving unrealistic. Solving the full problem, with human drivers whose behavior is random and with speed adjusted continuously, had been too slow for use in real time. Our own earlier method based on Monte Carlo Tree Search (MCTS) needed about 0.89 seconds of computing for each move.
+<blockquote class="pull-quote">
+  <p>Earlier methods made this problem easier to solve by simplifying it: assuming that every vehicle is a CAV, or cutting each trajectory into a few segments, each driven at a constant speed or a constant acceleration. <strong>Those assumptions make the math tractable but the driving unrealistic.</strong> <strong>Solving the full problem, with human drivers whose behavior is random and with speed adjusted continuously, had been too slow for use in real time.</strong> Our own earlier method based on Monte Carlo Tree Search (MCTS) needed about 0.89 seconds of computing for each move.</p>
+</blockquote>
 
 ## What did we do?
 

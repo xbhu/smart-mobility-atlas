@@ -56,7 +56,9 @@ ATDM sits between three older ideas, and the paper explains what it borrows from
   <figcaption>Three ways to manage travel demand, as compared in the paper. ATDM goes beyond traditional TDM by reaching ordinary drivers and by using non-pricing strategies such as rewards.</figcaption>
 </figure>
 
-The two tools ATDM relies on most are **dynamic traffic information** (for example, a commuter learns of a crash ahead and leaves later, or a shopping trip is postponed because of a predicted delay) and **incentives**, which can be cash or lottery rewards, free transit tickets, feedback such as gas saved, or donations to environmental causes. Smartphones now deliver both, trip by trip. That raises a practical question for agencies and app builders: **what does the evidence say about what it takes to change how people travel?**
+<blockquote class="pull-quote">
+  <p>The two tools ATDM relies on most are dynamic traffic information (for example, a commuter learns of a crash ahead and leaves later, or a shopping trip is postponed because of a predicted delay) and incentives, which can be cash or lottery rewards, free transit tickets, feedback such as gas saved, or donations to environmental causes. <strong>Smartphones now deliver both, trip by trip.</strong> That raises a practical question for agencies and app builders: <strong>what does the evidence say about what it takes to change how people travel?</strong></p>
+</blockquote>
 
 ## What did we do?
 

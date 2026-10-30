@@ -30,7 +30,9 @@ updated: 2026-10-27
 
 ## What problem does this research solve?
 
-Highway agencies close lanes all the time for construction and maintenance, and they plan big events that do the same. Each closure creates a bottleneck. But the effect does not stay at the bottleneck: drivers who know about it start looking for other routes, and the congestion can move onto streets and freeways that were never part of the work zone plan.
+<blockquote class="pull-quote">
+  <p>Highway agencies close lanes all the time for construction and maintenance, and they plan big events that do the same. Each closure creates a bottleneck. <strong>But the effect does not stay at the bottleneck: drivers who know about it start looking for other routes, and the congestion can move onto streets and freeways that were never part of the work zone plan.</strong></p>
+</blockquote>
 
 To plan for that, an agency needs to know **who changes route, where they go, and why**. That has been hard to answer. Traffic simulation models can predict network-wide effects, but only under assumptions about how drivers will react. Loop detectors and other fixed sensors measure how much traffic changes at their locations, but they cannot follow a person, so they cannot say which drivers detoured or why. Surveys ask drivers directly, but they rely on what people remember and report, and many people do not answer.
 

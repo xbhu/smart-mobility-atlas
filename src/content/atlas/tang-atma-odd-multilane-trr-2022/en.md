@@ -39,7 +39,9 @@ The **Autonomous Truck Mounted Attenuator (ATMA)** takes workers out of the most
 
 The catch is speed. The trucks typically move at only **5-15 mph**, much slower than the traffic around them. On a multilane highway, drivers can get around them in the other lanes, but they have to merge to do it, and the road carries fewer vehicles per hour while the ATMA is there. At heavy traffic, queues and delays build up behind it.
 
-So agencies have to decide **under how much traffic an ATMA can be used**: in automated-vehicle language, the system's *operational design domain* (ODD). The Manual on Uniform Traffic Control Devices and other national standards say nothing about it, so states set their own rules. Colorado DOT, for example, used an annual average daily traffic (AADT) of **under 6,000 vehicles** to pick low-volume roads for ATMA work. That may suit Colorado, but in states such as California and New York most multilane highways are far busier, and nobody had a sound way to say whether 6,000 is the right number, or how to work one out.
+<blockquote class="pull-quote">
+  <p><strong>So agencies have to decide under how much traffic an ATMA can be used</strong>: in automated-vehicle language, the system's <em>operational design domain</em> (ODD). The Manual on Uniform Traffic Control Devices and other national standards say nothing about it, so states set their own rules. Colorado DOT, for example, used an annual average daily traffic (AADT) of under 6,000 vehicles to pick low-volume roads for ATMA work. That may suit Colorado, but in states such as California and New York most multilane highways are far busier, and <strong>nobody had a sound way to say whether 6,000 is the right number, or how to work one out.</strong></p>
+</blockquote>
 
 ## What did we do?
 

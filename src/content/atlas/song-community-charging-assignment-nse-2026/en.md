@@ -36,7 +36,9 @@ The network models that planners use to predict where EV drivers go and where th
 - **Many routes, one charger.** Drivers from many origins and routes reach the same mall charger through different local streets. The wait at the charger depends on the combined arrivals from all of them, so the cost of driving down one access street depends on traffic on the other streets that feed the same station.
 - **One hardware capacity, shared by everyone.** A charger can serve only so many cars per hour. That single limit applies at once to every OD pair and route that uses it, which ties together trips that would otherwise be independent.
 
-To our knowledge, before this paper no model treated community charging as a network equilibrium with a queue-based waiting cost at each charger and a capacity shared across all its users.
+<blockquote class="pull-quote">
+  <p><strong>To our knowledge, before this paper no model treated community charging as a network equilibrium</strong> with a queue-based waiting cost at each charger and a capacity shared across all its users.</p>
+</blockquote>
 
 <figure>
   <img src="/media/song-community-charging-assignment-nse-2026/three-model-categories.png" alt="Three stacked versions of the same small network with nodes 1 to 8. Bottom: distance-constrained models, routes limited by a 5-mile range. Middle: corridor charging models, chargers 7 and 9 sit on freeway links. Top: community charging, charger 10 sits off the freeway and is reached by thin dashed local arterials from several nodes" loading="lazy" />

@@ -46,7 +46,9 @@ Two problems held UBI back:
 - **The data stay inside a few large insurers.** The telematics data these programs collect belong to the companies that collect them, and the devices are expensive. Smaller insurers, and the state regulators who must approve new rating plans, had little public evidence on how to turn GPS data into a fair price.
 - **The measures ignore context.** Programs flag hard braking, fast starts, late-night driving or a fixed top speed, for example 80 mph in one program, or 75 mph anywhere in an informal 2014 test of another program's app. None of them ask how fast the other cars on the same road were going at the time.
 
-Pricing matters for more than fairness. When an insurer cannot tell low-risk drivers from high-risk ones and charges them all the same, careful drivers move to insurers that reward them. The insurer is left with the riskier customers at a price set for the average driver, a problem economists call **adverse selection**. This paper shows, with real data, how to price driving behavior and what it costs an insurer not to.
+<blockquote class="pull-quote">
+  <p>Pricing matters for more than fairness. <strong>When an insurer cannot tell low-risk drivers from high-risk ones and charges them all the same, careful drivers move to insurers that reward them.</strong> The insurer is left with the riskier customers at a price set for the average driver, a problem economists call adverse selection. <strong>This paper shows, with real data, how to price driving behavior and what it costs an insurer not to.</strong></p>
+</blockquote>
 
 ## What did we do?
 

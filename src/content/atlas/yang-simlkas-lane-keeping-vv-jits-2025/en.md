@@ -32,7 +32,9 @@ updated: 2026-10-27
   <figcaption>Share of new U.S. vehicles equipped with lane keeping assistance, 2015–2023. In eight years it went from almost none to almost all. Data: MITRE (2024), PARTS market penetration of ADAS.</figcaption>
 </figure>
 
-But how well do these systems work when conditions are bad? Industry standards such as **ISO 11270** test LKAS on straight or curved roads at 20–22 m/s with clear markings on closed tracks, and require the car to stay within 0.4 m of the lane center (1.1 m for heavy vehicles). NHTSA's test procedure likewise calls for ideal weather and high-quality markings. These are minimum requirements, not a picture of how the system behaves in **heavy rain, fog, or on a dark curve**. Vendors' manuals warn that LKAS may not work reliably in poor weather, yet drivers can still overestimate it.
+<blockquote class="pull-quote">
+  <p>But how well do these systems work when conditions are bad? Industry standards such as ISO 11270 test LKAS on straight or curved roads at 20–22 m/s with clear markings on closed tracks, and require the car to stay within 0.4 m of the lane center (1.1 m for heavy vehicles). NHTSA's test procedure likewise calls for ideal weather and high-quality markings. <strong>These are minimum requirements, not a picture of how the system behaves in heavy rain, fog, or on a dark curve.</strong> <strong>Vendors' manuals warn that LKAS may not work reliably in poor weather, yet drivers can still overestimate it.</strong></p>
+</blockquote>
 
 Testing those conditions on real roads is slow, costly and sometimes unsafe, and you cannot order up a specific combination of rain, darkness, speed and curvature when you need it. Most field studies also record only a yes/no outcome (did the system see the left line, the right line, both?) rather than how far the car actually drifted. Simulators could fill the gap, but standard simulators such as CARLA and SUMO assume the car sees the lane perfectly and drives almost exactly on the centerline, which real vehicles do not.
 

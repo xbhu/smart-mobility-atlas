@@ -25,7 +25,9 @@ updated: 2026-10-25
 
 Before a city or utility builds a public EV charger, someone has to predict how much it will be used. Get it wrong and money goes into chargers that sit idle while busy neighbourhoods go without. Traffic counts and trip statistics help, but much of what makes a site busy is local: is there parking, is it next to offices, shops or homes, is it easy to see and reach?
 
-Today that local knowledge comes from people. Planners pick features by hand, rank candidate sites with a model, and then **visit the most promising ones in person** to record parking, land use, visibility and hazards such as hydrants and intersections. That is slow and costly, so it limits how many sites get a serious look. In our earlier [streetlight charging project in Kansas City](/pan-streetlight-charging-jupd-2025/), planners identified about 300 potential locations but had to cut the list to 60 for detailed in-person evaluation. What gets recorded also depends on who does the visit and which features they decide matter.
+<blockquote class="pull-quote">
+  <p>Today that local knowledge comes from people. Planners pick features by hand, rank candidate sites with a model, and then visit the most promising ones in person to record parking, land use, visibility and hazards such as hydrants and intersections. <strong>That is slow and costly, so it limits how many sites get a serious look.</strong> In our earlier <a href="/pan-streetlight-charging-jupd-2025/">streetlight charging project in Kansas City</a>, <strong>planners identified about 300 potential locations but had to cut the list to 60 for detailed in-person evaluation.</strong> What gets recorded also depends on who does the visit and which features they decide matter.</p>
+</blockquote>
 
 <figure>
   <img src="/media/song-visionev-trd-2026/approaches-compared.png" alt="Diagram comparing three approaches. Approach 1, traditional models: define features, train, rank candidates, visit sites, update features, predict. Approach 2, text-only LLMs: same site visits. Approach 3, VisionEV: satellite imagery and a text prompt go straight into a multimodal model that predicts demand." loading="lazy" />

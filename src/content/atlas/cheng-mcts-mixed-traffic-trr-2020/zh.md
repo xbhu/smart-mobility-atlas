@@ -17,7 +17,9 @@ updated: 2026-10-27
 
 在有信号灯的城市干道上，驾驶员往往加速赶到下一个路口，遇红灯刹车、等待，绿灯亮起后再加速。每一次停车和起步都在浪费燃油和时间。如果车辆提前知道信号灯何时变化，就可以早早松油门，在绿灯亮起时刚好抵达路口。
 
-**网联自动驾驶车辆**（Connected and Autonomous Vehicle，CAV）可以做到这一点。它通过车路通信（V2I）获取信号配时，包括当前亮的是哪种灯、还剩多少秒；它知道自己离停车线还有多远；它还能感知紧随其后那辆车的速度和车头间距。在单车道上，CAV后方的人工驾驶车辆（Human-Driven Vehicle，HDV）无法超车，所以CAV选择的车速决定了它所带领的每一辆车的行程。
+<blockquote class="pull-quote">
+  <p><strong>网联自动驾驶车辆（Connected and Autonomous Vehicle，CAV）可以做到这一点。</strong>它通过车路通信（V2I）获取信号配时，包括当前亮的是哪种灯、还剩多少秒；它知道自己离停车线还有多远；它还能感知紧随其后那辆车的速度和车头间距。<strong>在单车道上，CAV后方的人工驾驶车辆（Human-Driven Vehicle，HDV）无法超车，所以CAV选择的车速决定了它所带领的每一辆车的行程。</strong></p>
+</blockquote>
 
 <figure>
   <img src="/media/cheng-mcts-mixed-traffic-trr-2020/basic-interactive-units.png" alt="两条从起点通往停车线的单车道示意图。上方车道只有一辆CAV（阴影方框），后面跟着若干代表人工驾驶车辆的空白方框；下方车道有三辆CAV，虚线框把每辆CAV与紧跟其后的车辆分为一组" loading="lazy" />

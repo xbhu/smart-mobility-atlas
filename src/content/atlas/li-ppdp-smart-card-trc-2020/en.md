@@ -32,7 +32,9 @@ Every time a rider taps a transit smart card, the system records which station, 
 
 The trouble is that **removing names does not make the data anonymous**. A well-known study found that 87% of Americans can be identified from just their ZIP code, gender and date of birth. Travel records are even more revealing, because almost nobody else makes exactly the same trips at exactly the same times.
 
-We measured this on the Shenzhen Metro data. If an attacker knows only **two of a rider's trips**, the station and the time to within 10 minutes, **30.7% of riders can be singled out**, even with all personal information removed. If the attacker also knows the rider took a bus right after the subway, that rises to **41.4%**. Once a card ID is found, the attacker can read that person's entire travel history and infer where they live and work.
+<blockquote class="pull-quote">
+  <p>We measured this on the Shenzhen Metro data. <strong>If an attacker knows only two of a rider's trips, the station and the time to within 10 minutes, 30.7% of riders can be singled out, even with all personal information removed.</strong> If the attacker also knows the rider took a bus right after the subway, that rises to 41.4%. <strong>Once a card ID is found, the attacker can read that person's entire travel history and infer where they live and work.</strong></p>
+</blockquote>
 
 <figure>
   <img src="/media/li-ppdp-smart-card-trc-2020/background-knowledge-attack.png" alt="Diagram. At top, an attacker knows Alice was at Buxin station around 7:20 to 7:30 and at Longcheng Square around 8:09 to 8:19. Red lines link these two facts to the only matching card in a table of anonymous metro records, ID 20015461, whose full trip history reveals a home near Buxin and work at Longcheng Square. At bottom right, a second attacker knows Frank was at Gangxia around 8 pm and then took a bus, which matches only card 20099459" loading="lazy" />

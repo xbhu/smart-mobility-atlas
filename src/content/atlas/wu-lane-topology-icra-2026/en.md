@@ -26,7 +26,9 @@ updated: 2026-10-26
 
 To drive through a city, an automated vehicle needs more than a picture of the road. It needs a **lane graph**: where every lane's centerline runs, which lane continues into which, where lanes merge and split, and which traffic light or turn sign applies to each lane. Building this graph on the fly, from the car's own cameras, is called **lane topology reasoning**.
 
-Today's best camera-based models, such as BEVFormer and TopoNet, do this well when they can see. But city streets are full of things that block the view. A bus or a delivery truck can hide two lanes at once; trees, parked cars and faded paint hide the rest. Whatever the cameras cannot see, the model cannot reason about: a lane that is never detected never appears in the graph.
+<blockquote class="pull-quote">
+  <p>Today's best camera-based models, such as BEVFormer and TopoNet, do this well when they can see. But city streets are full of things that block the view. A bus or a delivery truck can hide two lanes at once; trees, parked cars and faded paint hide the rest. <strong>Whatever the cameras cannot see, the model cannot reason about: a lane that is never detected never appears in the graph.</strong></p>
+</blockquote>
 
 A common fix is to give the car a map. Recent work (SMERF) feeds a Standard Definition (SD) navigation map into the model as a prior. This helps, but only if the car knows exactly where it is on that map, which means precise GNSS. In urban canyons between tall buildings, in tunnels and in other GNSS-denied places, that alignment fails, and maps can also be out of date in construction zones.
 

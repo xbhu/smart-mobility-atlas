@@ -39,7 +39,9 @@ The **Autonomous Truck Mounted Attenuator (ATMA)** takes the worker out of the m
   <figcaption>The Missouri DOT trucks whose field-test data this study used: the lead truck (left) and the driverless follow truck with its attenuator (right).</figcaption>
 </figure>
 
-But the system changes the job of the person in the lead truck. They now drive for **two vehicles**. An ordinary driver changing lanes or turning at a green light only has to fit their own car through. An ATMA driver has to make sure the follow truck, 100 ft or more behind, can get through too; otherwise the convoy is split, with the lead truck in the new lane or across the intersection and the follow truck stranded behind, waiting for its own gap. Agencies had test results, but operators had **almost no practical guidance** on how much room and time to leave.
+<blockquote class="pull-quote">
+  <p>But the system changes the job of the person in the lead truck. <strong>They now drive for two vehicles.</strong> An ordinary driver changing lanes or turning at a green light only has to fit their own car through. An ATMA driver has to make sure the follow truck, 100 ft or more behind, can get through too; otherwise the convoy is split, with the lead truck in the new lane or across the intersection and the follow truck stranded behind, waiting for its own gap. <strong>Agencies had test results, but operators had almost no practical guidance on how much room and time to leave.</strong></p>
+</blockquote>
 
 ## What did we do?
 

@@ -29,7 +29,9 @@ updated: 2026-10-27
 
 **Range anxiety** is the fear that an electric vehicle (EV) does not have enough charge left to reach its destination and will leave its occupants stranded. It is one of the biggest barriers to wider EV adoption, and charging an EV takes far longer than filling a gas tank, so running low is a real cost.
 
-Many studies have looked at where and when EV drivers charge. Far fewer have asked a simpler question: **at what battery level do drivers decide to plug in, and what makes them do it earlier or later?** Phone users offer an analogy. Some plug in whenever they can, no matter how full the battery is; others wait until it is nearly empty. One study of smartphone users found that the "light consumers" did not start a charge until their battery had dropped to 34% on average.
+<blockquote class="pull-quote">
+  <p>Many studies have looked at where and when EV drivers charge. <strong>Far fewer have asked a simpler question: at what battery level do drivers decide to plug in, and what makes them do it earlier or later?</strong> Phone users offer an analogy. Some plug in whenever they can, no matter how full the battery is; others wait until it is nearly empty. One study of smartphone users found that the "light consumers" did not start a charge until their battery had dropped to 34% on average.</p>
+</blockquote>
 
 Earlier EV research had to study range anxiety indirectly: through simulated trips, stated-preference surveys, or an assumed formula linking battery level to anxiety that "still needed further justification." This paper takes a direct, data-driven route. It treats the battery level at the start of each real charging session, the **initial state of charge (SOC)**, as a measurable sign of range anxiety: a driver who plugs in at 80% is more cautious than one who waits until 20%. It then learns which factors push that number up or down.
 

@@ -35,7 +35,9 @@ The **Autonomous Truck Mounted Attenuator (ATMA)** takes highway workers out of 
   <figcaption>Left: an ATMA working on a two-lane road, with the driverless follow truck and its crash cushion in front and the lead truck ahead. Right: the follow truck and its attenuator. Images: Royal Truck &amp; Equipment, from Figure 1 of the paper.</figcaption>
 </figure>
 
-The trucks typically move at only **5-15 mph**. On a freeway, traffic can slip past in another lane. On a **two-lane highway**, with one lane in each direction, it cannot: drivers who catch up with the ATMA have to wait in a line behind it until there is a long enough gap in *oncoming* traffic to pull out and pass.
+<blockquote class="pull-quote">
+  <p>The trucks typically move at only 5-15 mph. On a freeway, traffic can slip past in another lane. <strong>On a two-lane highway, with one lane in each direction, it cannot: drivers who catch up with the ATMA have to wait in a line behind it until there is a long enough gap in <em>oncoming</em> traffic to pull out and pass.</strong></p>
+</blockquote>
 
 So agencies have to decide **on which roads, and under how much traffic, an ATMA should be used**. In automated-vehicle language this is the system's *operational design domain* (ODD). The Manual on Uniform Traffic Control Devices and other national standards give no guidance, so states have set their own rules. Colorado DOT, for example, used an annual average daily traffic (AADT) of **under 6,000 vehicles** to identify roads suitable for ATMA work. But two-lane highways are much busier in some states than in others, and nobody had a sound way to say whether 6,000 was the right number, or how to derive one.
 

@@ -28,7 +28,9 @@ Public money for EV charging is under scrutiny. Programs such as the National El
 
 An agency with a charging budget has two basic options. It can **build and run public chargers itself**, usually offering cheap or free charging. Or it can **subsidize private businesses** (restaurants, convenience stores, supermarkets, shopping centers, hotels) to install chargers that bring customers to their door; such businesses earn roughly $1 to $50 in profit per customer visit with a purchase, depending on the type of business. Programs like Pennsylvania's Driving PA Forward grants and the federal Charging and Fueling Infrastructure grants already work this way.
 
-The two owners want different things. A public agency wants chargers that are used a lot and reach everyone; a private investor wants profit. So the agency's real question is: **with a fixed budget, how much should go to public chargers and how much to private subsidies, and what does each choice mean for drivers and neighbourhoods?** Existing charger-siting models assume one planner with one goal and cannot answer it.
+<blockquote class="pull-quote">
+  <p>The two owners want different things. A public agency wants chargers that are used a lot and reach everyone; a private investor wants profit. <strong>So the agency's real question is: with a fixed budget, how much should go to public chargers and how much to private subsidies, and what does each choice mean for drivers and neighbourhoods?</strong> Existing charger-siting models assume one planner with one goal and cannot answer it.</p>
+</blockquote>
 
 ## What did we do?
 

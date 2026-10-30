@@ -26,7 +26,9 @@ updated: 2026-10-27
 
 ## What problem does this research solve?
 
-Transit smart cards, GPS devices and phones record where and when millions of people travel. Shared openly, these **trajectory data** are enormously useful for planning routes, schedules and stations. Agencies usually remove names and card numbers first and assume that makes the data safe. It does not.
+<blockquote class="pull-quote">
+  <p>Transit smart cards, GPS devices and phones record where and when millions of people travel. Shared openly, these trajectory data are enormously useful for planning routes, schedules and stations. <strong>Agencies usually remove names and card numbers first and assume that makes the data safe. It does not.</strong></p>
+</blockquote>
 
 Knowing just a 5-digit ZIP code, date of birth and gender is enough to single out about **87% of people in the U.S.** Using exactly this kind of linking, the medical records of then Massachusetts Governor William Weld were picked out of an "anonymized" health database and sent to his office. Travel data are no different: in our earlier study of Shenzhen Metro smart card data, **30.7% of riders could be uniquely identified from just two card taps**. If Alice posts that she was at Buxin station at 7:25 a.m. and checked in at Longcheng Square at 8:14 a.m., an attacker can find the one card that matches, then read where she went last weekend and whether she went home after work last Wednesday.
 

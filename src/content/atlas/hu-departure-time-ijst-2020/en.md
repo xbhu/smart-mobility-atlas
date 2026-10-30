@@ -34,7 +34,9 @@ updated: 2026-10-27
 
 ## What problem does this research solve?
 
-Rush-hour congestion is, at heart, the sum of millions of small decisions about **when to leave home**. Each commuter makes that choice again every morning. Some days it is pure habit; other days it changes because yesterday's drive was slow, a traffic app predicted a jam, or something else in the person's day moved. Because so much traffic comes from these repeated choices, understanding how they shift from one day to the next is one of the central questions in travel behavior research.
+<blockquote class="pull-quote">
+  <p><strong>Rush-hour congestion is, at heart, the sum of millions of small decisions about when to leave home.</strong> Each commuter makes that choice again every morning. Some days it is pure habit; other days it changes because yesterday's drive was slow, a traffic app predicted a jam, or something else in the person's day moved. Because so much traffic comes from these repeated choices, <strong>understanding how they shift from one day to the next is one of the central questions in travel behavior research.</strong></p>
+</blockquote>
 
 Smartphones have added two new forces to that daily decision. **Information**: apps now predict how long a trip will take if you leave at 7:00 rather than 7:15. **Incentives**: some programs reward drivers who avoid the peak, with points, lotteries, free transit tickets or gift cards. Together, they promise to turn passive traffic information into an active **travel demand management** tool that spreads trips away from the busiest minutes.
 

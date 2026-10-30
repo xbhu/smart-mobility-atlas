@@ -33,7 +33,9 @@ updated: 2026-10-27
 
 Planners estimate how long a trip on a road will take with a **link performance function**. The most widely used one, the Bureau of Public Roads (BPR) function, is built into most travel demand software. It works from a single ratio: the traffic volume counted on the road divided by the road's capacity (the volume-to-capacity, or v/c, ratio). The higher the ratio, the longer the travel time.
 
-That works until a bottleneck jams. Once traffic breaks down, cars crawl, and a detector counts **fewer** cars per hour than it did just before the jam, not more. Plotted against speed, the counts trace a U shape: speed falls as volume rises toward capacity, then speed and volume fall *together* once the road is oversaturated. To the BPR function, a jammed road with low counts looks like a quiet road. The cars that want to get through are still there; they are waiting in the queue, where a detector cannot count them as flow.
+<blockquote class="pull-quote">
+  <p>That works until a bottleneck jams. <strong>Once traffic breaks down, cars crawl, and a detector counts fewer cars per hour than it did just before the jam, not more.</strong> Plotted against speed, the counts trace a U shape: speed falls as volume rises toward capacity, then speed and volume fall <em>together</em> once the road is oversaturated. <strong>To the BPR function, a jammed road with low counts looks like a quiet road.</strong> The cars that want to get through are still there; they are waiting in the queue, where a detector cannot count them as flow.</p>
+</blockquote>
 
 <figure>
   <img src="/media/pan-bottleneck-state-estimation-trr-2025/demand-supply-equilibrium.png" alt="Three cost-versus-flow diagrams: a falling red demand curve, a rising blue supply curve, and the two combined, where an underestimated demand curve D1 meets supply at a lower point A instead of the true point B" loading="lazy" />

@@ -25,7 +25,9 @@ updated: 2026-10-26
 
 ## What problem does this research solve?
 
-A self-driving car has to know where it is at every moment. Satellite positioning (GPS and other GNSS) does most of that work, but it degrades or drops out exactly where driving is hardest: in **urban canyons, tunnels, under highway overpasses and at dense intersections**. When that happens, the car falls back on estimating its own motion from its other sensors, frame by frame, the way a navigator does dead reckoning.
+<blockquote class="pull-quote">
+  <p>A self-driving car has to know where it is at every moment. <strong>Satellite positioning (GPS and other GNSS) does most of that work, but it degrades or drops out exactly where driving is hardest: in urban canyons, tunnels, under highway overpasses and at dense intersections.</strong> When that happens, the car falls back on estimating its own motion from its other sensors, frame by frame, the way a navigator does dead reckoning.</p>
+</blockquote>
 
 **Visual odometry (VO)** does this with a camera. It compares two consecutive video frames, works out how the scene appears to have shifted, and from that infers how the car moved: how far forward, and how much it turned. Chaining those small steps together gives a running path. A single camera is cheap and already on almost every automated vehicle, so monocular VO is an attractive backup. Its weakness is that small errors in each step add up into drift.
 

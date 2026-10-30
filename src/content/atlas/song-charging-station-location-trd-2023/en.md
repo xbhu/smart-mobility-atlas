@@ -25,7 +25,11 @@ updated: 2026-10-25
 
 ## What problem does this research solve?
 
-A city or utility with money for a few dozen new EV chargers has to decide where to put them. The textbook approaches to this "charging station location problem" need things planners rarely have. Flow-based models start from an origin-destination table of EV trips, which requires knowing where EV owners live and where they drive. Node-based models measure a site by how much area it covers, not by how many cars will actually plug in. Neither gives the number decision makers ask for first: **how many charging sessions will this station see each week?** That number drives how many plugs to install, what revenue to expect and how much load the grid must carry.
+A city or utility with money for a few dozen new EV chargers has to decide where to put them. The textbook approaches to this "charging station location problem" need things planners rarely have. Flow-based models start from an origin-destination table of EV trips, which requires knowing where EV owners live and where they drive. Node-based models measure a site by how much area it covers, not by how many cars will actually plug in.
+
+<blockquote class="pull-quote">
+  <p><strong>Neither gives the number decision makers ask for first: how many charging sessions will this station see each week?</strong> That number drives how many plugs to install, what revenue to expect and how much load the grid must carry.</p>
+</blockquote>
 
 There is a second, subtler problem. Chargers change where EV drivers go: drivers favour destinations that offer charging, and a new station can pull demand away from nearby stations or make a whole area more attractive. So the stations already in the ground and the ones about to be built **cannot be judged one at a time**. Picking the 50 sites with the highest individual forecasts ignores how they affect each other and the existing network.
 

@@ -33,7 +33,9 @@ updated: 2026-10-27
 
 **Usage-based insurance** (UBI), sometimes called pay-as-you-drive insurance, sets a driver's premium from how they actually drive rather than only from age, gender or ZIP code. To do that fairly, an insurer needs driving scores that really predict crashes.
 
-Most driving scores today are built from the car's own GPS or sensor trace: how fast it went, how hard it braked, how often it sped up suddenly. What these traces leave out is the **context**. A burst of hard braking might be a careless driver, or it might be stop-and-go traffic that every driver on that road is fighting through. A driver who goes 7 mph faster than everyone else is just keeping up on an open arterial, but on a jammed road the same 7 mph means weaving from lane to lane to get past other cars.
+<blockquote class="pull-quote">
+  <p>Most driving scores today are built from the car's own GPS or sensor trace: how fast it went, how hard it braked, how often it sped up suddenly. <strong>What these traces leave out is the context.</strong> <strong>A burst of hard braking might be a careless driver, or it might be stop-and-go traffic that every driver on that road is fighting through.</strong> A driver who goes 7 mph faster than everyone else is just keeping up on an open arterial, but on a jammed road the same 7 mph means weaving from lane to lane to get past other cars.</p>
+</blockquote>
 
 Older crash research has the opposite gap. It finds risk factors such as age, alcohol or inexperience by comparing large groups of drivers, but it rarely has data on how each individual actually drives. We set out to measure each person's driving in context, and then check whether those measures line up with real crash histories.
 

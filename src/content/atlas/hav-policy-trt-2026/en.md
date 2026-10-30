@@ -28,7 +28,9 @@ Highly automated vehicles (HAVs), meaning vehicles that drive themselves at SAE 
 
 Public understanding has not kept up. Most Americans cannot tell a driver-assistance system such as Tesla's "Full Self-Driving (Supervised)" from a Level 4 system that needs no driver. Many assume they can buy an HAV and drive it home, although in many states only companies and institutions may hold an operating certificate. "Driverless" services still depend on remote human operators. And a single federal rulebook has been "coming soon" for a decade.
 
-These misunderstandings have real costs. Argo AI, a Pittsburgh self-driving company once valued at $12.4 billion, dissolved on the same day Pennsylvania signed Act 130, its first comprehensive HAV law. Its successor, StackAV, stayed in the state largely because Act 130 finally gave it a legal path to test on public roads.
+<blockquote class="pull-quote">
+  <p><strong>These misunderstandings have real costs.</strong> <strong>Argo AI, a Pittsburgh self-driving company once valued at $12.4 billion, dissolved on the same day Pennsylvania signed Act 130, its first comprehensive HAV law.</strong> Its successor, StackAV, stayed in the state largely because Act 130 finally gave it a legal path to test on public roads.</p>
+</blockquote>
 
 The paper argues that better public education alone will not close this gap, because three structural forces keep reproducing it:
 

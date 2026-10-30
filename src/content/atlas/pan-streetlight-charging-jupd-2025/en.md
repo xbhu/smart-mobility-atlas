@@ -32,7 +32,9 @@ updated: 2026-10-25
 
 ## What problem does this research solve?
 
-Most EV owners charge at home, in a garage or driveway. Renters and people living in apartment buildings usually have neither, and they are also the households for whom a used EV, with its low fuel and maintenance costs, could make the most financial sense. Research shows that low-income communities, communities of color and residents of multi-unit buildings have the least access to charging. Large public programs such as the $5 billion National Electric Vehicle Infrastructure (NEVI) program and home-charger rebates do little for someone who parks on the street.
+<blockquote class="pull-quote">
+  <p>Most EV owners charge at home, in a garage or driveway. <strong>Renters and people living in apartment buildings usually have neither, and they are also the households for whom a used EV, with its low fuel and maintenance costs, could make the most financial sense.</strong> Research shows that low-income communities, communities of color and residents of multi-unit buildings have the least access to charging. <strong>Large public programs such as the $5 billion National Electric Vehicle Infrastructure (NEVI) program and home-charger rebates do little for someone who parks on the street.</strong></p>
+</blockquote>
 
 Cities already own a dense network of powered poles along their curbs: streetlights. A charger mounted on a streetlight sits next to existing on-street parking, belongs to the city, and draws on power that is already there. That avoids most of the trenching, conduit, curb cutting and sidewalk work that makes conventional chargers expensive. Drivers can shop, eat or run errands nearby while they charge.
 
