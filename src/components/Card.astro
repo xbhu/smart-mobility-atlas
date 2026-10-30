@@ -25,8 +25,7 @@ const loop = pageLoop(page);
       <span class="card-title">{title}</span>
       <span class="card-tldr">{entry.data.tldr}</span>
       <span class="card-meta">
-        <span class="card-go">{lang === "zh" ? "阅读" : "Read"} <span aria-hidden="true">→</span></span>
-        {page.zh && lang === "en" && <span class="zh" lang="zh-CN">中文版</span>}
+        <span class="card-go">{lang === "zh" ? "阅读全文" : "Read more"} <span aria-hidden="true">→</span></span>
         {page.en.data.draft && <span>DRAFT</span>}
       </span>
     </span>
