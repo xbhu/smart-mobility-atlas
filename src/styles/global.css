@@ -280,6 +280,18 @@ figcaption, .caption { font: 600 0.88rem / 1.45 var(--font-sign); color: var(--m
 .card:hover .card-title { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.16em; }
 .card-tldr { font-size: 0.98rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .card-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--rule); font: 700 0.85rem var(--font-sign); color: var(--muted); }
+/* Phones: compact cards (thumbnail beside the title), so the 40+ papers do not take 40+ screens. */
+@media (max-width: 620px) {
+  .cards { gap: 12px; }
+  .card { flex-direction: row; }
+  .card:hover { transform: none; }
+  .card-media { flex: none; width: 116px; aspect-ratio: auto; min-height: 96px; }
+  .card-body { gap: 6px; padding: 12px 14px; }
+  .card-kicker { font-size: 0.76rem; gap: 2px; }
+  .card-title { font-size: 1rem; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-tldr, .card-meta, .card-play { display: none; }
+  .card-soon { left: 6px; top: 6px; font-size: 0.65rem; padding: 4px 5px; }
+}
 
 /* ---------- Home page ---------- */
 .home-intro { padding-top: clamp(40px, 6vw, 72px); padding-bottom: clamp(24px, 4vw, 36px); }
